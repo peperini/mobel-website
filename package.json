@@ -11,8 +11,8 @@
   },
   "scripts": {
     "clean": "rm -rf _site",
-    "dev": "npm run clean && eleventy --config=.eleventy.cjs --serve --incremental",
-    "build": "npm run clean && eleventy --config=.eleventy.cjs"
+    "dev": "npm run clean && eleventy --config=eleventy.config.js --serve --incremental",
+    "build": "npm run clean && eleventy --config=eleventy.config.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

@@ -1,12 +1,12 @@
 // Essential module imports for the configuration
-const path = require('path');
-const htmlmin = require('html-minifier');
-const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite').default;
-const pugPlugin = require("@11ty/eleventy-plugin-pug").default;
-const { VitePWA } = require('vite-plugin-pwa');
-const glslifyPlugin = require('vite-plugin-glslify').default;
+import path from 'path'
+import htmlmin from 'html-minifier'
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import pugPlugin from '@11ty/eleventy-plugin-pug'
+import { VitePWA } from 'vite-plugin-pwa'
+import glslifyPlugin from 'vite-plugin-glslify'
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // Configuring the Eleventy server to run on port 3000
   eleventyConfig.setServerOptions({
     port: 3000,
