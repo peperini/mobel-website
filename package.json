@@ -1,15 +1,31 @@
 {
   "name": "mobel-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A creative website for Mobel with Vite and 11ty integration.",
+  "author": "Jose Felix",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:peperini/mobel-website.git"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "clean": "rm -rf _site",
+    "dev": "npm run clean && eleventy --config=.eleventy.cjs --serve --incremental",
+    "build": "npm run clean && eleventy --config=.eleventy.cjs"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-vite": "^7.0.0",
+    "html-minifier": "^4.0.0",
+    "prettier": "^3.8.1",
+    "pug": "^3.0.3",
+    "sass": "^1.97.3",
     "typescript": "~5.9.3",
-    "vite": "^7.2.4"
+    "vite-plugin-glslify": "^2.3.0",
+    "vite-plugin-pwa": "^1.2.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-pug": "^1.0.0"
   }
 }
