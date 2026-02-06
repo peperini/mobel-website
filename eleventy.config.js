@@ -10,8 +10,9 @@ export default async function (eleventyConfig) {
   // Configuring the Eleventy server to run on port 3000
   eleventyConfig.setServerOptions({
     port: 3000,
+    showAllHosts: true,
   })
-  // Integrate Pug with 11ty using the 11ty Pug Plugin
+  // Integrate Pug with 11ty using the 11ty Pug Plugin (Pug was moved out of Eleventy core in v3)
   eleventyConfig.addPlugin(pugPlugin);
   // Integrate Vite with 11ty using the 11ty Vite Plugin
   eleventyConfig.addPlugin(EleventyVitePlugin, {
