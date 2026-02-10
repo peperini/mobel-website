@@ -1,0 +1,59 @@
+// PRIMITIVES
+$color-vista-white: #FCFAF8;
+$color-pearl-bush: #ECE6DA;
+$color-cod-gray: #131313;
+$color-just-blue: #0000ff;
+$color-outrageous-orange: #F85D39;
+$color-gray-1000: #000000;
+$color-gray-600: #808080;
+$color-gray-400: #AFAFAF;
+$color-gray-900: #1A1A1A;
+$color-gray-800: #333333;
+$color-gray-700: #4D4D4D;
+$color-gray-600: #666666;
+$color-gray-500: #808080;
+$color-gray-400: #999999;
+$color-gray-300: #B3B3B3;
+$color-gray-200: #CCCCCC;
+$color-gray-100: #E6E6E6;
+$color-gray-50: #F2F2F2;
+$color-gray-0: #FFFFFF;
+
+// TOKENS
+$color-surface-primary: $color-vista-white;
+$color-surface-secondary: $color-pearl-bush;
+$color-surface-accent: $color-just-blue;
+$color-text-primary: $color-cod-gray;
+$color-text-secondary: $color-gray-600;
+$color-text-invert: $color-vista-white;
+$color-border: $color-cod-gray;
+$color-border-invert: $color-vista-white;
+
+// MOBILE SPACING TOKENS
+$spacing-mobile-0: 4px;
+$spacing-mobile-1: 8px;
+$spacing-mobile-2: 16px;
+$spacing-mobile-3: 24px;
+$spacing-mobile-4: 32px;
+
+// DESKTOP SPACING TOKENS
+$spacing-desktop-0: 8px;
+$spacing-desktop-1: 16px;
+$spacing-desktop-2: 24px;
+$spacing-desktop-3: 32px;
+$spacing-desktop-4: 48px;
+
+// ANIMATIONS & EASING
+$ease-out-expo: cubic-bezier(0.19, 1, 0.4, 1);
+$animation-primary: 0.3s cubic-bezier(.5, 0, 0, 1);
+
+// FONTS
+$font-montreal: 'pp_neue_montreal';
+
+// Z-INDEXES
+$z-indexes: (
+  'preloader',
+  'navigation',
+  'footer',
+  'content'
+);

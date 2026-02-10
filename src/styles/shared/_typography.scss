@@ -1,0 +1,67 @@
+%bigger-text {
+  font-family: "Antipol VF";
+  font-size: 20rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 18rem */
+  text-transform: uppercase;
+}
+
+%big-title {
+  font-family: "Antipol VF";
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 10.8rem */
+  text-transform: uppercase;
+}
+
+%heading-2 {
+  font-family: "PP Neue Montreal";
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%; /* 7.2rem */
+}
+
+%heading-3 {
+  font-family: "PP Neue Montreal";
+  font-size: 6.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 7.2rem */
+}
+
+%heading-4 {
+  font-family: "PP Neue Montreal";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 5rem */
+}
+
+%heading-5 {
+  font-family: "PP Neue Montreal";
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 3.2rem */
+}
+
+%body-text {
+  font-family: "PP Neue Montreal";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 2.3rem */
+}
+
+%small-text {
+  font-family: "PP Neue Montreal";
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%; /* 1.38rem */
+  letter-spacing: 0.084rem;
+  text-transform: uppercase;
+}

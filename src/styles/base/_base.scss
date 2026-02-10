@@ -1,0 +1,34 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  @extend %cover;
+  @extend %body-text;
+
+  background: $color-surface-primary;
+  color: $color-text-primary;
+
+  font-size: calc(100vw / 1920 * 10);
+  line-height: 1;
+  overflow: hidden;
+  position: fixed;
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @include media('<phone') {
+    font-size: calc(100vw / 393 * 10)
+  }
+}
+
+body {
+  @extend %cover;
+
+  background: $color-surface-primary;
+  /*font-family: $font-montreal;*/
+  position: fixed;
+}

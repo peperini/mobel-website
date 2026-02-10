@@ -26,6 +26,7 @@
     "vite-plugin-pwa": "^1.2.0"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-pug": "^1.0.0"
+    "@11ty/eleventy-plugin-pug": "^1.0.0",
+    "include-media": "^2.0.0"
   }
 }
