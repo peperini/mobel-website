@@ -69,3 +69,33 @@
   letter-spacing: 0.084rem;
   text-transform: uppercase;
 }
+
+// LINKS
+
+// ------------------------------------
+// Usage
+// ------------------------------------
+//
+// .article a {
+//   @include links($color-text-primary, $color-outrageous-orange);
+// }
+//
+
+%links {
+  color: $color-text-primary;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2rem;
+  transition: color 200ms $animation-primary, text-decoration-color 200ms $animation-primary;
+}
+
+@mixin links($color, $hover) {
+  color: $color;
+  text-decoration-color: $color;
+
+  &:hover,
+  &:focus-visible {
+    color: $hover;
+    text-decoration: $hover;
+  }
+}
