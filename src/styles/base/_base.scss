@@ -29,6 +29,22 @@ body {
   @extend %cover;
 
   background: $color-surface-primary;
-  /*font-family: $font-montreal;*/
+  font-family: $font-montreal;
   position: fixed;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  @include focus-ring();
+}
+
+button,
+.button {
+  @extend %button-reset;
+  @extend %button-base;
+}
+
+a {
+  @extend %links;
 }

@@ -1,3 +1,5 @@
+// HEADINGS
+
 %bigger-text {
   font-family: "Antipol VF";
   font-size: 20rem;
@@ -48,6 +50,8 @@
   line-height: 100%; /* 3.2rem */
 }
 
+// BODY
+
 %body-text {
   font-family: "PP Neue Montreal";
   font-size: 2rem;
@@ -64,4 +68,34 @@
   line-height: 115%; /* 1.38rem */
   letter-spacing: 0.084rem;
   text-transform: uppercase;
+}
+
+// LINKS
+
+// ------------------------------------
+// Usage
+// ------------------------------------
+//
+// .article a {
+//   @include links($color-text-primary, $color-outrageous-orange);
+// }
+//
+
+%links {
+  color: $color-text-primary;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2rem;
+  transition: color 200ms $animation-primary, text-decoration-color 200ms $animation-primary;
+}
+
+@mixin links($color, $hover) {
+  color: $color;
+  text-decoration-color: $color;
+
+  &:hover,
+  &:focus-visible {
+    color: $hover;
+    text-decoration: $hover;
+  }
 }

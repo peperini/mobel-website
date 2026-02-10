@@ -1,0 +1,28 @@
+@font-face {
+  font-family: $font-montreal;
+  src: url('../../fonts/montreal-bold.woff2') format('woff2'), url('../../fonts/montreal-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: $font-montreal;
+  src: url('../../fonts/montreal-book.woff2') format('woff2'), url('../../fonts/montreal-book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-montreal;
+  src: url('../../fonts/montreal-medium.woff2') format('woff2'), url('../../fonts/montreal-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-antipol;
+  src: url('../../fonts/antipol-extended.woff2') format('woff2'), url('../../fonts/antipol-extended.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
