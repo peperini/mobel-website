@@ -1,3 +1,8 @@
+@mixin focus-ring($color: $color-outrageous-orange) {
+  outline: 0.2rem solid $color;
+  outline-offset: 0.2rem;
+}
+
 %cover {
   position: absolute;
   top: 0;
