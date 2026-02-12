@@ -1,0 +1,13 @@
+// Forward all variables so they're available to other modules
+@forward 'variables';
+
+// Forward functions (depends on variables for $z-indexes)
+@forward 'functions';
+
+// Forward mixins (depends on variables for colors, animation, spacing)
+@forward 'mixins';
+
+// Forward responsive (include-media with configured breakpoints)
+@forward 'responsive';
+
+// Vendors can be imported directly as it just contains styles

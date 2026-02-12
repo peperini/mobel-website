@@ -1,4 +1,6 @@
-//@use '../utils/responsive' as *;
+@use '../utils' as *;
+@use '../shared/typography' as *;
+@use '../shared/buttons' as *;
 
 *,
 *:after,

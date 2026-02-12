@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin focus-ring($color: $color-outrageous-orange) {
   outline: 0.2rem solid $color;
   outline-offset: 0.2rem;
