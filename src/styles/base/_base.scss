@@ -1,3 +1,5 @@
+//@use '../utils/responsive' as *;
+
 *,
 *:after,
 *:before {
@@ -7,7 +9,6 @@
 
 html {
   @extend %cover;
-  @extend %body-text;
 
   background: $color-surface-primary;
   color: $color-text-primary;
@@ -27,9 +28,9 @@ html {
 
 body {
   @extend %cover;
+  @extend %body-text;
 
   background: $color-surface-primary;
-  font-family: $font-montreal;
   position: fixed;
 }
 

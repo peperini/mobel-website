@@ -4,5 +4,15 @@ html(lang="en")
     include _includes/partials/head.pug
 
   body
+    // PARTIALS
+    include _includes/partials/header.pug
+    include _includes/partials/preloader.pug
+    include _includes/partials/unsupported.pug
+    include _includes/partials/footer.pug
+
+    // LAYOUTS
+    include _includes/layouts/home.pug
+    include _includes/layouts/products.pug
+    include _includes/layouts/about.pug
 
   script(type="module", src="/src/app/index.js")
