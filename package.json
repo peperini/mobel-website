@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-plugin-pug": "^1.0.0",
+    "fontfaceobserver": "^2.3.0",
     "include-media": "^2.0.0"
   }
 }
