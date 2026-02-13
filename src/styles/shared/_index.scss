@@ -1,0 +1,5 @@
+// Forward shared modules
+// These depend on utils, but won't forward them (loaded separately in main index)
+@forward 'pages';
+@forward 'buttons';
+@forward 'typography';

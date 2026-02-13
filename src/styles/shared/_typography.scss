@@ -1,5 +1,6 @@
-// HEADINGS
+@use '../utils' as *;
 
+// HEADINGS
 %bigger-text {
   font-family: $font-antipol;
   font-size: 20rem;

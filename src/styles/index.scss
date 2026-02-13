@@ -1,26 +1,27 @@
-@import './base/reset';
-
 // ------------------------------------
-// Utils
+// Reset comes first (no dependencies)
 // ------------------------------------
 
-@import './utils/variables';
-@import './utils/functions';
-@import './utils/mixins';
-@import './utils/vendors';
-@import './utils/responsive';
+@use './base/reset';
 
 // ------------------------------------
-// Shared
+// Utils (foundation layer)
 // ------------------------------------
 
-@import './shared/pages';
-@import './shared/buttons';
-@import './shared/typography';
+@use './utils' as *;
+@use './utils/vendors';
 
 // ------------------------------------
-// Base
+// Shared (component layer)
 // ------------------------------------
 
-@import './base/fonts';
-@import './base/base';
+@use './shared/pages' as *;
+@use './shared/buttons' as *;
+@use './shared/typography' as *;
+
+// ------------------------------------
+// Base (application layer)
+// ------------------------------------
+
+@use './base/fonts';
+@use './base/base';

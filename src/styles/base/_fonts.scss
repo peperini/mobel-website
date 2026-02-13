@@ -1,3 +1,5 @@
+@use '../utils/variables' as *;
+
 @font-face {
   font-family: $font-montreal;
   src: url('../../fonts/montreal-bold.woff2') format('woff2'), url('../../fonts/montreal-bold.woff') format('woff');

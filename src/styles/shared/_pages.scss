@@ -1,3 +1,5 @@
+@use '../utils' as *;
+
 %page {
   @extend %cover;
 
@@ -13,8 +15,4 @@
 
 %page__wrapper {
   color: inherit;
-}
-
-.hero {
-  background: $color-surface-secondary;
 }

@@ -1,3 +1,6 @@
+@use '../utils' as *;
+@use 'typography';
+
 %button-reset {
   appearance: none;
   background: none;
