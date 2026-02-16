@@ -123,6 +123,41 @@
           }
         }
       ]
+    },
+
+    "brands": {
+      "cards": [
+        {
+          "image": {
+            "alt": "Home brands cards image 1",
+            "url": "/img/home/card-01.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 1",
+            "url": "/img/home/logo-01.png"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home brands cards image 2",
+            "url": "/img/home/card-02.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 2",
+            "url": "/img/home/logo-02.png"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home brands cards image 3",
+            "url": "/img/home/card-03.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 3",
+            "url": "/img/home/logo-03.png"
+          }
+        }
+      ]
     }
   }
 }
