@@ -10,15 +10,15 @@
 }
 
 html {
-  @extend %cover;
+  //@extend %cover;
 
   background: $color-surface-primary;
   color: $color-text-primary;
 
   font-size: calc(100vw / 1920 * 10);
   line-height: 1;
-  overflow: hidden;
-  position: fixed;
+  /*overflow: hidden;
+  position: fixed;*/
   overscroll-behavior: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -29,11 +29,11 @@ html {
 }
 
 body {
-  @extend %cover;
+  //@extend %cover;
   @extend %body-text;
 
   background: $color-surface-primary;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 a:focus-visible,
@@ -50,4 +50,6 @@ button,
 
 a {
   @extend %links;
+
+  @include links($color-text-primary, $color-outrageous-orange);
 }
