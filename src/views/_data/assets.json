@@ -1,0 +1,163 @@
+{
+  "header": {
+    "nav": {
+      "navList": [
+        {
+          "navItem": {
+            "text": "Home",
+            "url": "/",
+            "animation": "paragraph"
+          }
+        },
+        {
+          "navItem": {
+            "text": "Products",
+            "url": "/products",
+            "animation": "paragraph"
+          }
+        },
+        {
+          "navItem": {
+            "text": "About",
+            "url": "/about",
+            "animation": "paragraph"
+          }
+        },
+        {
+          "navItem": {
+            "text": "Contact",
+            "url": "/contact",
+            "animation": "paragraph"
+          }
+        },
+        {
+          "navItem": {
+            "text": "Careers",
+            "url": "/careers",
+            "animation": "paragraph"
+          }
+        }
+      ]
+    }
+  },
+
+  "home": {
+    "hero": {
+      "gallery": [
+        {
+          "image": { "alt": "Home hero gallery image 1", "url": "/img/home/hero-01.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 2", "url": "/img/home/hero-02.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 3", "url": "/img/home/hero-03.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 4", "url": "/img/home/hero-04.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 5", "url": "/img/home/hero-05.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 6", "url": "/img/home/hero-06.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 7", "url": "/img/home/hero-07.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 8", "url": "/img/home/hero-08.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 9", "url": "/img/home/hero-09.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 10", "url": "/img/home/hero-10.webp" }
+        },
+        {
+          "image": { "alt": "Home hero gallery image 11", "url": "/img/home/hero-11.webp" }
+        }
+      ]
+    },
+
+    "products": {
+      "slider": [
+        {
+          "image": {
+            "alt": "Home products slider image 1",
+            "url": "/img/home/slider-01.webp"
+          },
+          "text": {
+            "title": "Category 1",
+            "description": "Description of category 1"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home products slider image 2",
+            "url": "/img/home/slider-02.webp"
+          },
+          "text": {
+            "title": "Category 2",
+            "description": "Description of category 2"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home products slider image 3",
+            "url": "/img/home/slider-03.webp"
+          },
+          "text": {
+            "title": "Category 3",
+            "description": "Description of category 3"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home products slider image 4",
+            "url": "/img/home/slider-04.webp"
+          },
+          "text": {
+            "title": "Category 4",
+            "description": "Description of category 4"
+          }
+        }
+      ]
+    },
+
+    "brands": {
+      "cards": [
+        {
+          "image": {
+            "alt": "Home brands cards image 1",
+            "url": "/img/home/card-01.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 1",
+            "url": "/img/home/logo-01.png"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home brands cards image 2",
+            "url": "/img/home/card-02.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 2",
+            "url": "/img/home/logo-02.png"
+          }
+        },
+        {
+          "image": {
+            "alt": "Home brands cards image 3",
+            "url": "/img/home/card-03.webp"
+          },
+          "logo": {
+            "alt": "Home brands cards logo 3",
+            "url": "/img/home/logo-03.png"
+          }
+        }
+      ]
+    }
+  }
+}

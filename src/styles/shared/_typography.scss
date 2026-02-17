@@ -87,7 +87,7 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2rem;
-  transition: color 200ms $animation-primary, text-decoration-color 200ms $animation-primary;
+  transition: color 200ms $ease-out-expo, text-decoration-color 200ms $ease-out-expo;
 }
 
 @mixin links($color, $hover) {

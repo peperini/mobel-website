@@ -6,13 +6,19 @@ html(lang="en")
   body
     // PARTIALS
     include _includes/partials/header.pug
-    include _includes/partials/preloader.pug
-    include _includes/partials/unsupported.pug
-    include _includes/partials/footer.pug
+    //include _includes/partials/preloader.pug
+    //include _includes/partials/unsupported.pug
 
     // LAYOUTS
     include _includes/layouts/home.pug
     include _includes/layouts/products.pug
     include _includes/layouts/about.pug
+
+    //PARTIALS
+    include _includes/partials/contact.pug
+    include _includes/partials/footer.pug
+
+  script.
+    window.ASSETS = !{JSON.stringify(assets).replace(/<\//g, '<\\/')}
 
   script(type="module", src="/src/app/index.js")
