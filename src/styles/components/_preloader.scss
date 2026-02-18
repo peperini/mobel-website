@@ -1,3 +1,5 @@
+@use '../shared' as *;
+
 .preloader {
   @extend %page;
 }

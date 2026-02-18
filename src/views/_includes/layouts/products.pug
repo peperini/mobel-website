@@ -1,0 +1,14 @@
+.products
+  .products__wrapper
+    .products__list
+      ul.products__list__filters
+        each element in assets.products.productList.filters
+          li.list__filters__filter
+            span!=element.filter.name
+            span!=element.filter.number
+      .products__list__gallery
+        each media, index in assets.products.productList.gallery
+          figure.products__gallery__media(class=`products__gallery__media--${ index + 1 }`)
+            img.products__gallery__media__image(alt=media.image.alt data-src=media.image.url)
+      a.products__list__link(data-animation=assets.products.productList.link.animation href=assets.products.productList.link.target)
+        span!=assets.products.productList.link.text

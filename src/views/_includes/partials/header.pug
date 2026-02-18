@@ -15,7 +15,7 @@
       ul.header__navList
         each nav in assets.header.nav.navList
           li.header__navList__item
-            a.navList__item__link(data-animation=nav.navItem.animation href=nav.navItem.url)
+            a.navList__item__link(data-animation=nav.navItem.animation href=nav.navItem.target)
               span!=nav.navItem.text
     .header__actions
       ul.actions__langList
