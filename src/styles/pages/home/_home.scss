@@ -2,4 +2,8 @@
 
 .home {
   @extend %page;
+
+  &--active {
+    @extend %page--active;
+  }
 }

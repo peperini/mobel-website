@@ -1,4 +1,4 @@
 .preloader
   each media, index in assets.home.hero.gallery
     figure.preloader__media(class=`preloader__media--${index + 1}`)
-      img.preloader__media__img(alt=media.image.alt data-src=media.image.url)
+      img.preloader__media__img(alt=media.image.alt src=media.image.url)
