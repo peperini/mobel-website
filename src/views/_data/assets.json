@@ -45,37 +45,37 @@
     "hero": {
       "gallery": [
         {
-          "image": { "alt": "Home hero gallery image 1", "url": "/img/home/hero-01.webp" }
+          "image": { "alt": "Home hero gallery image 1", "url": "/img/home/hero-01.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 2", "url": "/img/home/hero-02.webp" }
+          "image": { "alt": "Home hero gallery image 2", "url": "/img/home/hero-02.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 3", "url": "/img/home/hero-03.webp" }
+          "image": { "alt": "Home hero gallery image 3", "url": "/img/home/hero-03.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 4", "url": "/img/home/hero-04.webp" }
+          "image": { "alt": "Home hero gallery image 4", "url": "/img/home/hero-04.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 5", "url": "/img/home/hero-05.webp" }
+          "image": { "alt": "Home hero gallery image 5", "url": "/img/home/hero-05.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 6", "url": "/img/home/hero-06.webp" }
+          "image": { "alt": "Home hero gallery image 6", "url": "/img/home/hero-06.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 7", "url": "/img/home/hero-07.webp" }
+          "image": { "alt": "Home hero gallery image 7", "url": "/img/home/hero-07.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 8", "url": "/img/home/hero-08.webp" }
+          "image": { "alt": "Home hero gallery image 8", "url": "/img/home/hero-08.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 9", "url": "/img/home/hero-09.webp" }
+          "image": { "alt": "Home hero gallery image 9", "url": "/img/home/hero-09.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 10", "url": "/img/home/hero-10.webp" }
+          "image": { "alt": "Home hero gallery image 10", "url": "/img/home/hero-10.png" }
         },
         {
-          "image": { "alt": "Home hero gallery image 11", "url": "/img/home/hero-11.webp" }
+          "image": { "alt": "Home hero gallery image 11", "url": "/img/home/hero-11.png" }
         }
       ]
     },

@@ -1,5 +1,76 @@
 @use '../shared' as *;
+@use '../utils' as *;
 
 .preloader {
+  @extend %center;
+  @extend %cover;
   @extend %page;
+
+  background: $color-surface-primary;
+  z-index: z('preloader');
+}
+
+.preloader__media {
+  position: absolute;
+
+  &--1 {
+    width: 18.2rem;
+    height: 25rem;
+  }
+
+  &--2 {
+    width: 23rem;
+    height: 16.9rem;
+  }
+
+  &--3   {
+    width: 18rem;
+    height: 22.5rem;
+  }
+
+  &--4 {
+    width: 15rem;
+    height: 20rem;
+  }
+
+  &--5 {
+    width: 17rem;
+    height: 11.4rem;
+  }
+
+  &--6 {
+    width: 13rem;
+    height: 16.7rem;
+  }
+
+  &--7 {
+    width: 15rem;
+    height: 11.3rem;
+  }
+
+  &--8 {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  &--9 {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  &--10 {
+    width: 9rem;
+    height: 8.5rem;
+  }
+
+  &--11 {
+    width: 8rem;
+    height: 10.1rem;
+  }
+}
+
+.preloader__media__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }

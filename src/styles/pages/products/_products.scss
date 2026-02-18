@@ -1,5 +1,9 @@
 @use '../../shared' as *;
 
 .products {
+  @extend %page;
 
+  &--active {
+    @extend %page--active;
+  }
 }

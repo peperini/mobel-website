@@ -2,4 +2,8 @@
 
 .about {
   @extend %page;
+
+  &--active {
+    @extend %page--active;
+  }
 }
