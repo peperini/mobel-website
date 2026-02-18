@@ -12,7 +12,7 @@
 @use './utils/vendors';
 
 // ------------------------------------
-// Shared (component layer)
+// Shared (components layer)
 // ------------------------------------
 
 @use './shared/pages' as *;
@@ -25,3 +25,22 @@
 
 @use './base/fonts';
 @use './base/base';
+
+// ------------------------------------
+// Components
+// ------------------------------------
+
+@use './components/preloader';
+
+// ------------------------------------
+// Layout
+// ------------------------------------
+
+// ------------------------------------
+// Pages
+// ------------------------------------
+
+@use './pages/home/home';
+@use './pages/about/about';
+@use './pages/products/products';
+@use './pages/unsupported/unsupported';

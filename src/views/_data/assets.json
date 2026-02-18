@@ -159,5 +159,37 @@
         }
       ]
     }
+  },
+
+  "about": {
+    "story": {
+      "content": {
+        "body": {
+          "text": "Möbel distributes the widest range of Herman Miller and Knoll products in Quebec. Their products offer the perfect blend of style, functionality and durability for modern and innovative workspaces. Whether for the office or the home, Möbel helps create inspiring spaces where you will love to work and live.",
+          "animation": "paragraph"
+        },
+        "button": {
+          "text": "Start New Project",
+          "animation": "paragraph"
+        }
+      }
+    },
+
+    "certDist": {
+      "content": {
+        "body": {
+          "text": "As Quebec’s premier, certified distributor of Herman Miller and Knoll, Möbel brings global design excellence to local spaces. We’re proud to offer exclusive access to the full MillerKnoll portfolio, delivering exceptional quality, refined aesthetics, and lasting performance to both businesses and individuals across the province.",
+          "animation": "paragraph"
+        },
+        "title": {
+          "text": "Qubec’s Premiere Distributor",
+          "animation": "paragraph"
+        },
+        "image": {
+          "alt": "Quebec's Flag Image",
+          "url": "/img/about/flag.webp"
+        }
+      }
+    }
   }
 }
