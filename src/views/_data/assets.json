@@ -5,35 +5,35 @@
         {
           "navItem": {
             "text": "Home",
-            "url": "/",
+            "target": "/",
             "animation": "paragraph"
           }
         },
         {
           "navItem": {
             "text": "Products",
-            "url": "/products",
+            "target": "/products",
             "animation": "paragraph"
           }
         },
         {
           "navItem": {
             "text": "About",
-            "url": "/about",
+            "target": "/about",
             "animation": "paragraph"
           }
         },
         {
           "navItem": {
             "text": "Contact",
-            "url": "/contact",
+            "target": "/contact",
             "animation": "paragraph"
           }
         },
         {
           "navItem": {
             "text": "Careers",
-            "url": "/careers",
+            "target": "/careers",
             "animation": "paragraph"
           }
         }
@@ -163,32 +163,146 @@
 
   "about": {
     "story": {
-      "content": {
-        "body": {
-          "text": "Möbel distributes the widest range of Herman Miller and Knoll products in Quebec. Their products offer the perfect blend of style, functionality and durability for modern and innovative workspaces. Whether for the office or the home, Möbel helps create inspiring spaces where you will love to work and live.",
-          "animation": "paragraph"
-        },
-        "button": {
-          "text": "Start New Project",
-          "animation": "paragraph"
-        }
+      "body": {
+        "text": "Möbel distributes the widest range of Herman Miller and Knoll products in Quebec. Their products offer the perfect blend of style, functionality and durability for modern and innovative workspaces. Whether for the office or the home, Möbel helps create inspiring spaces where you will love to work and live.",
+        "animation": "paragraph"
+      },
+      "button": {
+        "text": "Start New Project",
+        "animation": "paragraph"
       }
     },
 
     "certDist": {
-      "content": {
-        "body": {
-          "text": "As Quebec’s premier, certified distributor of Herman Miller and Knoll, Möbel brings global design excellence to local spaces. We’re proud to offer exclusive access to the full MillerKnoll portfolio, delivering exceptional quality, refined aesthetics, and lasting performance to both businesses and individuals across the province.",
-          "animation": "paragraph"
+      "body": {
+        "text": "As Quebec’s premier, certified distributor of Herman Miller and Knoll, Möbel brings global design excellence to local spaces. We’re proud to offer exclusive access to the full MillerKnoll portfolio, delivering exceptional quality, refined aesthetics, and lasting performance to both businesses and individuals across the province.",
+        "animation": "paragraph"
+      },
+      "title": {
+        "text": "Qubec’s Premiere Distributor",
+        "animation": "paragraph"
+      },
+      "image": {
+        "alt": "Quebec's Flag Image",
+        "url": "/img/about/flag.webp"
+      }
+    }
+  },
+
+  "products": {
+    "productList": {
+      "gallery": [
+        {
+          "image": {
+            "alt": "Product list gallery image 1",
+            "url": "/img/products/prod-01.webp"
+          }
         },
-        "title": {
-          "text": "Qubec’s Premiere Distributor",
-          "animation": "paragraph"
+        {
+          "image": {
+            "alt": "Product list gallery image 2",
+            "url": "/img/products/prod-02.webp"
+          }
         },
-        "image": {
-          "alt": "Quebec's Flag Image",
-          "url": "/img/about/flag.webp"
+        {
+          "image": {
+            "alt": "Product list gallery image 3",
+            "url": "/img/products/prod-03.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 4",
+            "url": "/img/products/prod-04.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 5",
+            "url": "/img/products/prod-05.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 6",
+            "url": "/img/products/prod-06.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 7",
+            "url": "/img/products/prod-07.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 8",
+            "url": "/img/products/prod-08.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 9",
+            "url": "/img/products/prod-09.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 10",
+            "url": "/img/products/prod-10.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 11",
+            "url": "/img/products/prod-11.webp"
+          }
+        },
+        {
+          "image": {
+            "alt": "Product list gallery image 12",
+            "url": "/img/products/prod-12.webp"
+          }
         }
+      ],
+
+      "filters": [
+        {
+          "filter": {
+            "name": "All",
+            "number": "38"
+          }
+        },
+        {
+          "filter": {
+            "name": "Seating",
+            "number": "11"
+          }
+        },
+        {
+          "filter": {
+            "name": "Desks & Tables",
+            "number": "8"
+          }
+        },
+        {
+          "filter": {
+            "name": "Accessories",
+            "number": "14"
+          }
+        },
+        {
+          "filter": {
+            "name": "Storage",
+            "number": "5"
+          }
+        }
+      ],
+
+      "link": {
+        "text": "Load more",
+        "target": "#",
+        "animation": "paragraph"
       }
     }
   }
