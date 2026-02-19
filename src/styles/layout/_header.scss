@@ -1,0 +1,75 @@
+@use '../utils' as *;
+@use '../shared' as *;
+
+.header {
+  // @extend %cover;
+  @extend %center;
+
+  width: 100%;
+  padding: 2.5rem 2rem;
+  justify-content: space-between;
+  /*pointer-events: none;*/
+  position: fixed;
+  z-index: z('header');
+}
+
+.header__nav {
+  @extend %center;
+
+  gap: 37.6rem;
+}
+
+.header__nav__logoLink {
+
+}
+
+.header__logo {
+  width: 12rem;
+  height: 3.6rem;
+}
+
+.header__navList {
+  @extend %center;
+
+  gap: 2rem;
+}
+
+.header__navList__item {
+
+}
+
+.navList__item__link {
+  @extend %small-text;
+}
+
+.header__actions {
+  @extend %center;
+
+  gap: 3rem;
+}
+
+.actions__langList {
+  @extend %center;
+
+  gap: 0.5rem;
+}
+
+.actions__langList__item {
+  @extend %small-text;
+}
+
+.actions__langList__item__div {
+
+}
+
+.actions__cta {
+
+}
+
+.actions__cta__text {
+
+}
+
+.actions__cta__svg {
+
+}

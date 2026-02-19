@@ -15,7 +15,7 @@ html {
   background: $color-surface-primary;
   color: $color-text-primary;
 
-  font-size: calc(100vw / 1920 * 10);
+  font-size: calc(100vw / 1512 * 10);
   line-height: 1;
   overflow: hidden;
   position: fixed;
@@ -42,9 +42,7 @@ button:focus-visible,
   @include focus-ring();
 }
 
-button,
-.button {
-  @extend %button-reset;
+button, .button {
   @extend %button-base;
 }
 

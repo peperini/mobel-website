@@ -1,32 +1,32 @@
 @use '../utils' as *;
 @use 'typography';
 
-%button-reset {
-  appearance: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-}
-
 %button-base {
-  @extend %body-text;
+  @extend %small-text;
   @extend %center;
 
-  gap: 0.6rem;
-  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 1rem 1.3rem;
+  gap: 1rem;
   border: 1px solid $color-border;
+  border-radius: 0.5rem;
   background: $color-surface-primary;
   color: $color-text-primary;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
   transition: background $animation-primary, color $animation-primary, border-color $animation-primary, transform 150ms $ease-out-expo;
+
+  svg path {
+    transition: fill $animation-primary, transform 150ms $ease-out-expo;
+  }
 
   &:hover {
     background: $color-surface-accent;
     color: $color-text-invert;
     border-color: $color-surface-accent;
+
+    svg path {
+      fill: $color-text-invert;
+    }
   }
 
   &:active {
