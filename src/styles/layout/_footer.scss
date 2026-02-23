@@ -1,0 +1,199 @@
+@use '../utils' as *;
+@use '../shared' as *;
+
+.footer {
+  height: 87.8rem;
+  padding: 5rem 2rem;
+  background: $color-surface-accent;
+  color: $color-text-invert;
+  overflow: hidden;
+}
+
+.footer__wrapper {
+  width: 100%;
+  height: 100% ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 5rem;
+}
+
+.footer__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__info__contact {
+  display: flex;
+  width: 46.2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact__inner {
+  display: flex;
+  width: 17.9rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8.4rem;
+  flex-shrink: 0;
+}
+
+.contact__info {
+  display: flex;
+  width: 15.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.contact__info__phone {
+  color: $color-text-invert;
+}
+
+.contact__info__mail {
+  color: $color-text-invert;
+}
+
+.contact__button__cta {
+  @extend %button-inverted;
+}
+
+.contact__button__lang {
+  @extend %button-ghost;
+}
+
+.footer__info__right {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.sitemap {
+  display: flex;
+  width: 35.3rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.sitemap__item {
+
+}
+
+.sitemap__item__link {
+  color: $color-text-invert;
+}
+
+.addresses {
+  display: flex;
+  width: 47.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.addresses__montreal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.montreal__title {
+  width: 10.4rem;
+}
+
+.montreal__address {
+  color: $color-text-invert;
+  width: 22.9rem;
+}
+
+.addresses__quebec {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.quebec__title {
+  width: 10.4rem;
+}
+
+.quebec__address {
+  color: $color-text-invert;
+  width: 22.9rem;
+}
+
+.footer__copyRight {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyRight__logo_wrapper {
+  display: flex;
+  width: 46.2rem;
+  align-items: center;
+}
+
+.millerKnollLogo {
+  flex-shrink: 0;
+}
+
+.footer__copyRight__right {
+  display: flex;
+  width: 84.9rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyRight__text {
+  color: $color-text-invert;
+  width: 35.3rem;
+  flex-shrink: 0;
+}
+
+.copyRight__socials {
+  display: flex;
+  width: 22.9rem;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.copyRight__socials__link {
+  width: 3.9rem;
+  height: 3.9rem;
+  flex-shrink: 0;
+}
+
+.linkedin {
+
+}
+
+.twitter {
+
+}
+
+.instagram {
+
+}
+
+.footer__divider {
+  width: 100%;
+  height: 0.1rem;
+  background: $color-border-invert;
+}
+
+.footer__bigtext {
+  @extend %bigger-text;
+
+  width: 729.4rem;
+  height: 14.1rem;
+  margin-left: -1.2rem;
+}
