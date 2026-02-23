@@ -17,8 +17,8 @@ html {
 
   font-size: calc(100vw / 1512 * 10);
   line-height: 1;
-  overflow: hidden;
-  position: fixed;
+  /*overflow: hidden;*/
+  /*position: fixed;*/
   overscroll-behavior: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ body {
   @extend %body-text;
 
   background: $color-surface-primary;
-  position: fixed;
+ /* position: fixed;*/
 }
 
 a:focus-visible,

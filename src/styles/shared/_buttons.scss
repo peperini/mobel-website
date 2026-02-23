@@ -33,3 +33,54 @@
     transform: translateY(1px);
   }
 }
+
+%button-inverted {
+  @extend %small-text;
+  @extend %center;
+
+  cursor: pointer;
+  line-height: 1;
+  padding: 1rem 1.3rem;
+  gap: 1rem;
+  border: 1px solid $color-border-invert;
+  border-radius: 0.5rem;
+  background: $color-surface-primary;
+  color: $color-text-accent;
+  transition: background $animation-primary, color $animation-primary, border-color $animation-primary, transform 150ms $ease-out-expo;
+
+  svg path {
+    transition: fill $animation-primary, transform 150ms $ease-out-expo;
+  }
+
+  &:hover {
+    background: $color-surface-accent;
+    color: $color-text-invert;
+    border-color: $color-border-invert;
+
+    svg path {
+      fill: $color-text-invert;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+%button-ghost {
+  @extend %button-base;
+
+  border: 1px solid $color-border-invert;
+  background: $color-surface-accent;
+  color: $color-text-invert;
+
+  &:hover {
+    background: $color-surface-primary;
+    color: $color-text-accent;
+    border-color: $color-border-invert;
+
+    svg path {
+      fill: $color-text-invert;
+    }
+  }
+}
