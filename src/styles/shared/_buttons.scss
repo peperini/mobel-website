@@ -45,7 +45,7 @@
   border: 1px solid $color-border-invert;
   border-radius: 0.5rem;
   background: $color-surface-primary;
-  color: $color-text-accent;
+  color: $color-text-primary;
   transition: background $animation-primary, color $animation-primary, border-color $animation-primary, transform 150ms $ease-out-expo;
 
   svg path {
@@ -82,5 +82,38 @@
     svg path {
       fill: $color-text-invert;
     }
+  }
+}
+
+%button-inverted--big {
+  @extend %body-text;
+  @extend %center;
+
+  cursor: pointer;
+  line-height: 1;
+  padding: 1.5rem 2.5rem;
+  gap: 1rem;
+  border: 1px solid $color-border-invert;
+  border-radius: 0.5rem;
+  background: $color-surface-primary;
+  color: $color-text-primary;
+  transition: background $animation-primary, color $animation-primary, border-color $animation-primary, transform 150ms $ease-out-expo;
+
+  svg path {
+    transition: fill $animation-primary, transform 150ms $ease-out-expo;
+  }
+
+  &:hover {
+    background: $color-surface-accent;
+    color: $color-text-invert;
+    border-color: $color-surface-accent;
+
+    svg path {
+      fill: $color-text-invert;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 }

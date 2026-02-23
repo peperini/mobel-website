@@ -1,0 +1,67 @@
+@use '../utils' as *;
+@use '../shared' as *;
+
+.contact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 2rem;
+  overflow: hidden;
+}
+
+.background__video {
+  @extend %cover;
+
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contact__wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.contact__subtitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact__subtitle__text {
+  @extend %heading-5;
+
+  color: $color-text-invert;
+}
+
+.contact__subtitle__divider {
+  width: 100%;
+  height: 1px;
+  background: $color-border-invert;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.contact__content__title {
+  @extend %big-title;
+
+  color: $color-text-invert;
+  margin-left: -1.2rem;
+}
+
+.contact__content__cta {
+  @extend %button-inverted--big;
+}
+
