@@ -3,10 +3,9 @@
     .home__hero
       h1.home__hero__title Workspaces that inspire, wherever you work.
       .home__hero__gallery
-        each row in [0, 1]
-          each media, index in assets.home.hero.gallery
-            figure.hero__gallery__media(class=`hero__gallery__media--${index + 1}`)
-              img.hero__gallery__media__img(alt=media.image.alt data-src=media.image.url)
+        each media, index in assets.home.hero.gallery
+          figure.hero__gallery__media(class=`hero__gallery__media--${index + 1}`)
+            img.hero__gallery__media__img(alt=media.image.alt src=media.image.url)
       .home__hero__bottom
         .home__hero__bottom__logo
           svg.millerKnollLogo(width="192" height="20" viewBox="0 0 192 20" fill="none")

@@ -15,6 +15,7 @@
 .home__hero {
   @extend %center;
 
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -32,23 +33,99 @@
 
 .hero__gallery__media {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  &--1 {
+    width: 18.2rem;
+    height: 25rem;
+    top: 30.4rem;
+    right: 6.7rem;
+  }
+
+  &--2 {
+    width: 23rem;
+    height: 16.9rem;
+    top: 69rem;
+    left: 101.5rem;
+  }
+
+  &--3   {
+    width: 18rem;
+    height: 22.5rem;
+    top: 70.3rem;
+    left: 26.9rem;
+  }
+
+  &--4 {
+    width: 15rem;
+    height: 20rem;
+    top: 22.9rem;
+    left: 0;
+  }
+
+  &--5 {
+    width: 17rem;
+    height: 11.4rem;
+    top: 13.5rem;
+    left: 51.7rem
+  }
+
+  &--6 {
+    width: 13rem;
+    height: 16.7rem;
+    top: 15.1rem;
+    left: 89rem;
+  }
+
+  &--7 {
+    width: 15rem;
+    height: 11.3rem;
+    top: 20.2rem;
+    left: 39.3rem;
+  }
+
+  &--8 {
+    width: 9rem;
+    height: 9rem;
+    top: 9rem;
+    left: 138.8rem;
+  }
+
+  &--9 {
+    width: 9rem;
+    height: 9rem;
+    top: 52.4rem;
+    left: 14.4rem;
+  }
+
+  &--10 {
+    width: 9rem;
+    height: 8.5rem;
+    top: 62rem;
+    left: 51.7rem;
+  }
+
+  &--11 {
+    width: 8rem;
+    height: 10.1rem;
+    top: 62rem;
+    right: -2.3rem;
+  }
 }
 
 .hero__gallery__media__img {
-
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .home__hero__bottom {
-  @extend %center;
-
+  display: flex;
   align-items: flex-end;
-  gap: 24.6rem;
+  justify-content: space-between;
   position: absolute;
-  bottom: 5rem;
-  width: 147.2rem;
+  bottom: 0;
+  width: 100%;
+  padding: 2.5rem 2rem;
 }
 
 .home__hero__bottom__logo {
@@ -71,6 +148,7 @@
 
   width: 22.9rem;
   justify-content: flex-end;
+  gap: 1rem;
 }
 
 .home__about {
