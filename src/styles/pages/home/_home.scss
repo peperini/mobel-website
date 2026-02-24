@@ -7,3 +7,180 @@
     @extend %page--active;
   }
 }
+
+.home__wrapper {
+  width: 100%;
+}
+
+.home__hero {
+  @extend %center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.home__hero__title {
+  @extend %heading-2;
+
+  width: 97.3rem;
+  text-align: center;
+}
+
+.home__hero__gallery {
+
+}
+
+.hero__gallery__media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__gallery__media__img {
+
+}
+
+.home__hero__bottom {
+  @extend %center;
+
+  align-items: flex-end;
+  gap: 24.6rem;
+  position: absolute;
+  bottom: 5rem;
+  width: 147.2rem;
+}
+
+.home__hero__bottom__logo {
+  width: 22.9rem;
+  flex-shrink: 0;
+}
+
+.millerKnollLogo {
+
+}
+
+.hero__bottom__subtext {
+  text-align: center;
+  width: 52.2rem;
+}
+
+.hero__bottom__link {
+  @extend %links;
+  @extend %center;
+
+  width: 22.9rem;
+  justify-content: flex-end;
+}
+
+.home__about {
+
+}
+
+.home__about__title {
+
+}
+
+.home__about__cta {
+
+}
+
+.home__products {
+
+}
+
+.home__products__header {
+
+}
+
+.products__header__title {
+
+}
+
+.products__header__link {
+
+}
+
+.bottom__link__svg {
+
+}
+
+.home__products__slider {
+
+}
+
+.products__slider__category {
+
+}
+
+.slider__category__media {
+
+}
+
+.slider__category__media__img {
+
+}
+
+.slider__category__info {
+
+}
+
+.category__info__title {
+
+}
+
+.category__info__description {
+
+}
+
+.home__brands {
+
+}
+
+.home__brands__content {
+
+}
+
+.brands__content__title-left {
+
+}
+
+.brands__content__media__cards {
+
+}
+
+.media__cards__img {
+
+}
+
+.media__cards__logo {
+
+}
+
+.brands__content__title-right {
+
+}
+
+.home__brands__bottom {
+
+}
+
+.millerKnollLogo {
+
+}
+
+.brands__bottom__subtext {
+
+}
+
+.brands__bottom__link {
+
+}
+
+.bottom__link__text {
+
+}
+
+.bottom__link__svg {
+
+}
