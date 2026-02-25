@@ -1,4 +1,5 @@
 @use '../../shared' as *;
+@use '../../utils' as *;
 
 .products {
   @extend %page;
@@ -6,4 +7,62 @@
   &--active {
     @extend %page--active;
   }
+}
+
+.products__wrapper {
+  width: 100%;
+}
+
+.products__list {
+  @extend %center;
+
+  width: 100%;
+  padding: 14rem 2rem 5rem 2rem;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.products__list__filters {
+  @extend %center;
+
+  gap: 3rem;
+}
+
+.list__filters__filter {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+
+  &:not(:first-child) {
+    color: $color-gray-400;
+  }
+}
+
+.filter__text {
+  @extend %heading-5;
+}
+
+.filter__number {
+  @extend %small-text;
+}
+
+.products__list__gallery {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.products__gallery__media {
+  width: 35.3rem;
+  height: 36.9rem;
+}
+
+.products__gallery__media__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.products__list__link {
+
 }

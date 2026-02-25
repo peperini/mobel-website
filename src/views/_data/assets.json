@@ -195,73 +195,73 @@
         {
           "image": {
             "alt": "Product list gallery image 1",
-            "url": "/img/products/prod-01.webp"
+            "url": "/img/products/grid__element-00.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 2",
-            "url": "/img/products/prod-02.webp"
+            "url": "/img/products/grid__element-01.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 3",
-            "url": "/img/products/prod-03.webp"
+            "url": "/img/products/grid__element-02.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 4",
-            "url": "/img/products/prod-04.webp"
+            "url": "/img/products/grid__element-03.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 5",
-            "url": "/img/products/prod-05.webp"
+            "url": "/img/products/grid__element-04.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 6",
-            "url": "/img/products/prod-06.webp"
+            "url": "/img/products/grid__element-05.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 7",
-            "url": "/img/products/prod-07.webp"
+            "url": "/img/products/grid__element-06.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 8",
-            "url": "/img/products/prod-08.webp"
+            "url": "/img/products/grid__element-07.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 9",
-            "url": "/img/products/prod-09.webp"
+            "url": "/img/products/grid__element-08.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 10",
-            "url": "/img/products/prod-10.webp"
+            "url": "/img/products/grid__element-09.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 11",
-            "url": "/img/products/prod-11.webp"
+            "url": "/img/products/grid__element-10.png"
           }
         },
         {
           "image": {
             "alt": "Product list gallery image 12",
-            "url": "/img/products/prod-12.webp"
+            "url": "/img/products/grid__element-11.png"
           }
         }
       ],
