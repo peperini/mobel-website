@@ -85,41 +85,41 @@
         {
           "image": {
             "alt": "Home products slider image 1",
-            "url": "/img/home/slider-01.webp"
+            "url": "/img/home/slider-01.png"
           },
           "text": {
-            "title": "Category 1",
-            "description": "Description of category 1"
+            "title": "Seating",
+            "description": "Ergonomic chairs and stylish seating options for every space."
           }
         },
         {
           "image": {
             "alt": "Home products slider image 2",
-            "url": "/img/home/slider-02.webp"
+            "url": "/img/home/slider-02.png"
           },
           "text": {
-            "title": "Category 2",
-            "description": "Description of category 2"
+            "title": "Desks & Tables",
+            "description": "From compact desks to statement dining tables."
           }
         },
         {
           "image": {
             "alt": "Home products slider image 3",
-            "url": "/img/home/slider-03.webp"
+            "url": "/img/home/slider-03.png"
           },
           "text": {
-            "title": "Category 3",
-            "description": "Description of category 3"
+            "title": "Storage",
+            "description": "Smart storage solutions to keep your space organized without sacrificing style."
           }
         },
         {
           "image": {
             "alt": "Home products slider image 4",
-            "url": "/img/home/slider-04.webp"
+            "url": "/img/home/slider-04.png"
           },
           "text": {
-            "title": "Category 4",
-            "description": "Description of category 4"
+            "title": "Accessories",
+            "description": "Complete your room with timeless accents and statement pieces."
           }
         }
       ]
@@ -130,31 +130,31 @@
         {
           "image": {
             "alt": "Home brands cards image 1",
-            "url": "/img/home/card-01.webp"
+            "url": "/img/home/card-01.png"
           },
           "logo": {
             "alt": "Home brands cards logo 1",
-            "url": "/img/home/logo-01.png"
+            "url": "/img/home/logo-01.svg"
           }
         },
         {
           "image": {
             "alt": "Home brands cards image 2",
-            "url": "/img/home/card-02.webp"
+            "url": "/img/home/card-02.png"
           },
           "logo": {
             "alt": "Home brands cards logo 2",
-            "url": "/img/home/logo-02.png"
+            "url": "/img/home/logo-02.svg"
           }
         },
         {
           "image": {
             "alt": "Home brands cards image 3",
-            "url": "/img/home/card-03.webp"
+            "url": "/img/home/card-01.png"
           },
           "logo": {
             "alt": "Home brands cards logo 3",
-            "url": "/img/home/logo-03.png"
+            "url": "/img/home/logo-01.svg"
           }
         }
       ]

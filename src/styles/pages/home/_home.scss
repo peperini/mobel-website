@@ -1,4 +1,5 @@
 @use '../../shared' as *;
+@use '../../utils' as *;
 
 .home {
   @extend %page;
@@ -44,14 +45,14 @@
   &--2 {
     width: 23rem;
     height: 16.9rem;
-    top: 69rem;
-    left: 101.5rem;
+    bottom: 12.3rem;
+    right: 26.7rem;
   }
 
   &--3   {
     width: 18rem;
     height: 22.5rem;
-    top: 70.3rem;
+    bottom: 5.4rem;
     left: 26.9rem;
   }
 
@@ -118,7 +119,7 @@
   object-fit: cover;
 }
 
-.home__hero__bottom {
+.home__hero__bottom, .home__brands__bottom {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -128,22 +129,17 @@
   padding: 2.5rem 2rem;
 }
 
-.home__hero__bottom__logo {
+.home__hero__bottom__logo, .home__brands__bottom__logo {
   width: 22.9rem;
   flex-shrink: 0;
 }
 
-.millerKnollLogo {
-
-}
-
-.hero__bottom__subtext {
+.hero__bottom__subtext, .brands__bottom__subtext {
   text-align: center;
   width: 52.2rem;
 }
 
-.hero__bottom__link {
-  @extend %links;
+.hero__bottom__link, .brands__bottom__link {
   @extend %center;
 
   width: 22.9rem;
@@ -152,55 +148,122 @@
 }
 
 .home__about {
+  @extend %center;
 
+  position: relative;
+  flex-direction: column;
+  background: $color-surface-accent;
+  color: $color-text-invert;
+  width: 100%;
+  height: 100vh;
 }
 
 .home__about__title {
+  @extend %big-title;
 
+  text-align: center;
+  width: 122.4rem;
 }
 
 .home__about__cta {
+  @extend %button-inverted--big;
 
+  position: absolute;
+  bottom: 2.5rem;
 }
 
 .home__products {
-
+  width: 100%;
+  height: 100vh;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 .home__products__header {
-
+  width: 60.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .products__header__title {
+  @extend %heading-2;
 
+  margin-left: -0.5rem;
 }
 
 .products__header__link {
+  @extend %center;
 
-}
-
-.bottom__link__svg {
-
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .home__products__slider {
+  @extend %center;
 
+  width: 72.6rem;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
 .products__slider__category {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  padding: 1.6rem 1.7rem;
+  background: $color-surface-secondary;
+  width: 100%;
 
+  &--1 {
+    height: 44.1rem;
+    background: #E3E7ED;
+
+    .slider__category__info {
+      z-index: 1;
+    }
+  }
+  &--2 {
+    height: 35.9rem;
+  }
+  &--3 {
+    height: 41.6rem;
+  }
+  &--4 {
+    height: 38.9rem;
+  }
 }
 
 .slider__category__media {
+  @extend %cover;
 
+  &--1 img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44rem;
+  }
 }
 
 .slider__category__media__img {
-
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .slider__category__info {
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .category__info__title {
@@ -208,57 +271,58 @@
 }
 
 .category__info__description {
-
+  color: #808080;
 }
 
 .home__brands {
+  @extend %center;
 
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: $color-surface-secondary;
+  padding: 2.5rem 2rem;
 }
 
 .home__brands__content {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .brands__content__title-left {
+  @extend %heading-2;
 
+  width: 35.3rem;
+  flex-shrink: 0;
 }
 
-.brands__content__media__cards {
-
+.brands__content__cards__collection {
+  width: 47.8rem;
+  height: 28.9rem;
+  position: relative;
 }
 
-.media__cards__img {
-
+.content__card__media {
+  @extend %cover;
+  @extend %center;
 }
 
-.media__cards__logo {
+.content__card__media__img {
+  @extend %cover;
 
+  object-fit: cover;
+}
+
+.content__card__media__logo {
+  position: absolute;
 }
 
 .brands__content__title-right {
+  @extend %heading-2;
 
-}
-
-.home__brands__bottom {
-
-}
-
-.millerKnollLogo {
-
-}
-
-.brands__bottom__subtext {
-
-}
-
-.brands__bottom__link {
-
-}
-
-.bottom__link__text {
-
-}
-
-.bottom__link__svg {
-
+  width: 35.3rem;
+  flex-shrink: 0;
+  text-align: right;
 }
