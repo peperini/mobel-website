@@ -1,4 +1,5 @@
 @use '../../shared' as *;
+@use '../../utils' as *;
 
 .about {
   @extend %page;
@@ -6,4 +7,67 @@
   &--active {
     @extend %page--active;
   }
+}
+
+.about__wrapper {
+  width: 100%;
+}
+
+.about__story {
+  @extend %center;
+
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 2rem;
+}
+
+.about__story__title {
+  @extend %heading-4;
+
+  width: 97.2rem;
+  text-align: center;
+}
+
+.about__story__cta {
+  @extend %body-text;
+
+  letter-spacing: 0.2rem;
+  position: absolute;
+  bottom: 5rem;
+}
+
+.about__certDist {
+  @extend %center;
+
+  background: $color-surface-secondary;
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.about__certDist__content {
+  width: 60.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 32.4rem;
+}
+
+.certDist__content__text {
+  @extend %heading-5;
+}
+
+.certDist__content__title {
+  @extend %heading-2;
+}
+
+.about__certDist__media {
+  width: 72.6rem;
+  height: 48.4rem;
+  position: relative;
+}
+
+.about__certDist__media__image {
+  @extend %cover;
 }
