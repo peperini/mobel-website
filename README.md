@@ -1,95 +1,92 @@
-# Möbel Creative Website
+# Möbel — Website
 
-A creative, static marketing site for Möbel, built with Eleventy (11ty) and Vite. The project uses Pug for templates, Sass for styling, and Vite plugins for PWA support and GLSL shader imports.
+A creative website for Möbel, a MillerKnoll dealer based in Quebec. Built with Eleventy and Vite, featuring Pug templating, SCSS styling, GLSL shader support, and PWA capabilities.
 
-## Overview
-- Static site generation with Eleventy
-- Asset bundling and dev server via Vite
-- Pug templates for HTML
-- Sass for styling
-- PWA support (service worker + asset caching)
-- GLSL imports for shader workflows
+---
 
-## Tech Stack
-- Eleventy v3
-- Vite (via `@11ty/eleventy-plugin-vite`)
-- Pug (`@11ty/eleventy-plugin-pug`)
-- Sass
-- TypeScript (available for tooling)
-- Vite PWA (`vite-plugin-pwa`)
-- GLSL imports (`vite-plugin-glslify`)
+## See Live
 
-## Requirements
-- Node.js (LTS recommended)
-- npm
+[mobel-website.vercel.app](https://mobel-website.vercel.app/)
 
-## Getting Started
-Install dependencies:
+---
 
-```sh
-npm install
+## Pages
+
+### Home
+A hero gallery section with product imagery, a brand showcase highlighting the MillerKnoll partnership, a product category slider, and a contact section. Assets are injected at build time via a JSON data file and rendered through Pug loops.
+
+### Products
+A filterable product catalogue organized by category and brand. Products and metadata are driven by the central `assets.json` data source.
+
+### About
+A brand story section presenting Möbel's positioning as a curated MillerKnoll experience for businesses and homes across Quebec.
+
+---
+
+## Tech
+
+| Tool | Role |
+|---|---|
+| [Eleventy (11ty)](https://www.11ty.dev/) | Static site generator |
+| [Vite](https://vitejs.dev/) | Asset bundling via `@11ty/eleventy-plugin-vite` |
+| [Pug](https://pugjs.org/) | HTML templating engine |
+| [Sass](https://sass-lang.com/) | CSS preprocessor |
+| [vite-plugin-glslify](https://github.com/glslify/glslify) | GLSL shader imports |
+| [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) | Progressive Web App support |
+| [include-media](https://eduardoboucas.github.io/include-media/) | SCSS breakpoint mixins |
+| [FontFaceObserver](https://fontfaceobserver.com/) | Font loading detection |
+| Vanilla JS (ESM) | No framework — native ES modules |
+
+---
+
+## Structure
+
+```
+mobel-website/
+├── src/
+│   ├── app/
+│   │   └── index.js                  # JS entry point
+│   ├── fonts/                        # Antipol Extended, Montreal (woff/woff2)
+│   ├── styles/
+│   │   ├── base/                     # Reset, fonts, base styles
+│   │   ├── components/               # Preloader, contact
+│   │   ├── layout/                   # Header, footer
+│   │   ├── pages/                    # Per-page styles (home, products, about)
+│   │   ├── shared/                   # Typography, buttons, page transitions
+│   │   └── utils/                    # Variables, mixins, functions, responsive
+│   └── views/
+│       ├── _data/
+│       │   └── assets.json           # Centralized content & asset registry
+│       ├── _includes/
+│       │   ├── layouts/              # home.pug, products.pug, about.pug
+│       │   └── partials/             # head, header, footer, preloader, contact
+│       └── index.pug                 # Single entry template
+├── public/                           # Static assets (passthrough copy)
+├── eleventy.config.js                # Eleventy + Vite configuration
+└── package.json
 ```
 
-Start the development server:
+---
 
-```sh
+## Running Locally
+
+```bash
+npm install
 npm run dev
 ```
 
-The site is served at `http://localhost:3000` by default.
+Open `http://localhost:3000`.
 
-Build for production:
+To build for production:
 
-```sh
+```bash
 npm run build
 ```
 
-Clean the output directory:
+Output is written to `_site/`.
 
-```sh
-npm run clean
-```
+---
 
-## Scripts
-- `npm run dev`: Clean and serve Eleventy with incremental builds
-- `npm run build`: Clean and build the site for production
-- `npm run clean`: Remove the `_site` output directory
+## Author
 
-## Project Structure
-```
-.
-├── public/             # Static assets copied as-is
-├── src/
-│   ├── app/            # Client-side JS (Vite root)
-│   ├── fonts/          # Font files
-│   ├── styles/         # Sass and CSS
-│   └── views/          # Pug templates (Eleventy input)
-│       ├── _data/      # Eleventy data files
-│       ├── _includes/  # Pug includes and partials
-│       └── index.pug   # Main entry template
-├── _site/              # Build output (generated)
-└── eleventy.config.js  # Eleventy + Vite configuration
-```
-
-## Configuration Notes
-- Eleventy input directory: `src/views`
-- Output directory: `_site`
-- Pug is the HTML template engine
-- Vite root: `src`
-- Public assets: `public`
-- Server runs on port `3000`
-- HTML output is minified in production builds
-
-### Vite Aliases
-- `@styles` → `src/styles`
-- `@app` → `src/app`
-- `@utils` → `src/app/utils`
-- `@components` → `src/app/components`
-- `@shaders` → `src/app/shaders`
-- `@classes` → `src/app/classes`
-- `@animations` → `src/app/animations`
-- `@pages` → `src/app/pages`
-- `@canvas` → `src/app/components/Canvas`
-
-## Deployment
-The production build outputs static files to `_site`. Deploy the contents of `_site` to any static hosting provider.
+**José Félix** — Creative Technologist & Design Engineer

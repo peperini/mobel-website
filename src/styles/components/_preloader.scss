@@ -6,6 +6,7 @@
   @extend %cover;
   @extend %page;
 
+
   background: $color-surface-primary;
   z-index: z('preloader');
 }
