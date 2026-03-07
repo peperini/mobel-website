@@ -2,13 +2,7 @@
 
 A creative website for Möbel, a MillerKnoll dealer based in Quebec. Built with Eleventy and Vite, featuring Pug templating, SCSS styling, GLSL shader support, and PWA capabilities.
 
----
-
-## See Live
-
-[mobel-website.vercel.app](https://mobel-website.vercel.app/)
-
----
+[See Live](https://mobel-website.vercel.app/)
 
 ## Pages
 
@@ -20,8 +14,6 @@ A filterable product catalogue organized by category and brand. Products and met
 
 ### About
 A brand story section presenting Möbel's positioning as a curated MillerKnoll experience for businesses and homes across Quebec.
-
----
 
 ## Tech
 
@@ -36,8 +28,6 @@ A brand story section presenting Möbel's positioning as a curated MillerKnoll e
 | [include-media](https://eduardoboucas.github.io/include-media/) | SCSS breakpoint mixins |
 | [FontFaceObserver](https://fontfaceobserver.com/) | Font loading detection |
 | Vanilla JS (ESM) | No framework — native ES modules |
-
----
 
 ## Structure
 
@@ -66,8 +56,6 @@ mobel-website/
 └── package.json
 ```
 
----
-
 ## Running Locally
 
 ```bash
@@ -84,8 +72,6 @@ npm run build
 ```
 
 Output is written to `_site/`.
-
----
 
 ## Author
 
