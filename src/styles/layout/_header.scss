@@ -11,6 +11,10 @@
   /*pointer-events: none;*/
   position: fixed;
   z-index: z('header');
+
+  @include media('<phone') {
+    padding: 2rem 1rem;
+  }
 }
 
 .header__nav {

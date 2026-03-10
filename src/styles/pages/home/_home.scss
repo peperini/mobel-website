@@ -26,6 +26,12 @@
 
   width: 97.3rem;
   text-align: center;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 100%;
+  }
 }
 
 .home__hero__gallery {
@@ -38,8 +44,15 @@
   &--1 {
     width: 18.2rem;
     height: 25rem;
-    top: 30.4rem;
     right: 6.7rem;
+    top: 30.4rem;
+
+    @include media('<phone') {
+      width: 10rem;
+      height: 12.5rem;
+      right: 7.2rem;
+      top: 19.8rem;
+    }
   }
 
   &--2 {
@@ -47,6 +60,13 @@
     height: 16.9rem;
     bottom: 12.3rem;
     right: 26.7rem;
+
+    @include media('<phone') {
+      width: 12.9375rem;
+      height: 9.4918rem;
+      right: 2.3625rem;
+      bottom: 16.8082rem;
+    }
   }
 
   &--3   {
@@ -54,6 +74,13 @@
     height: 22.5rem;
     bottom: 5.4rem;
     left: 26.9rem;
+
+    @include media('<phone') {
+      width: 9rem;
+      height: 11.25rem;
+      left: 5.2rem;
+      bottom: 13.45rem;
+    }
   }
 
   &--4 {
@@ -61,20 +88,41 @@
     height: 20rem;
     top: 22.9rem;
     left: 0;
+
+    @include media('<phone') {
+      width: 8.4375rem;
+      height: 11.25rem;
+      left: 0;
+      top: 18.3rem;
+    }
   }
 
   &--5 {
     width: 17rem;
     height: 11.4rem;
     top: 13.5rem;
-    left: 51.7rem
+    left: 51.7rem;
+
+    @include media('<phone') {
+      width: 8.5463rem;
+      height: 5.7rem;
+      right: 14.8537rem;
+      top: 8.9rem;
+      left: unset;
+    }
   }
 
   &--6 {
     width: 13rem;
     height: 16.7rem;
     top: 15.1rem;
-    left: 89rem;
+    right: 49.2rem;
+
+    @include media('<phone') {
+      width: 7.3115rem;
+      height: 9.3938rem;
+      right: 0.9885rem;
+    }
   }
 
   &--7 {
@@ -82,6 +130,13 @@
     height: 11.3rem;
     top: 20.2rem;
     left: 39.3rem;
+
+    @include media('<phone') {
+      width: 7.5rem;
+      height: 5.6275rem;
+      left: 9.7rem;
+      top: 12.25rem;
+    }
   }
 
   &--8 {
@@ -89,27 +144,55 @@
     height: 9rem;
     top: 9rem;
     left: 138.8rem;
+
+    @include media('<phone') {
+      width: 5.5rem;
+      height: 5.5rem;
+      left: 14.4rem;
+      top: -0.6rem;
+    }
   }
 
   &--9 {
     width: 9rem;
     height: 9rem;
-    top: 52.4rem;
     left: 14.4rem;
+    bottom: 36.8rem;
+
+    @include media('<phone') {
+      width: 6.75rem;
+      height: 6.75rem;
+      left: -1.3rem;
+      bottom: 27.15rem;
+    }
   }
 
   &--10 {
     width: 9rem;
     height: 8.5rem;
-    top: 62rem;
     left: 51.7rem;
+    bottom: 27.7rem;
+
+    @include media('<phone') {
+      width: 6.75rem;
+      height: 6.3405rem;
+      left: 11.9rem;
+      bottom: 23.2595rem;
+    }
   }
 
   &--11 {
     width: 8rem;
     height: 10.1rem;
-    top: 62rem;
     right: -2.3rem;
+    bottom: 26.1rem;
+
+    @include media('<phone') {
+      width: 6rem;
+      height: 7.5694rem;
+      right: 0;
+      bottom: 25.1306rem;
+    }
   }
 }
 
@@ -127,16 +210,35 @@
   bottom: 0;
   width: 100%;
   padding: 2.5rem 2rem;
+
+  @include media('<phone') {
+    padding: 2rem 1rem;
+    align-items: center;
+  }
 }
 
 .home__hero__bottom__logo, .home__brands__bottom__logo {
   width: 22.9rem;
   flex-shrink: 0;
+
+  @include media('<phone') {
+    width: 14.6rem;
+    height: 1.7rem;
+  }
 }
 
 .hero__bottom__subtext, .brands__bottom__subtext {
   text-align: center;
   width: 52.2rem;
+
+  @include media('<phone') {
+    position: absolute;
+    bottom: 5.8rem;
+    left: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
 }
 
 .hero__bottom__link, .brands__bottom__link {
@@ -145,6 +247,10 @@
   width: 22.9rem;
   justify-content: flex-end;
   gap: 1rem;
+
+  @include media('<phone') {
+    font-size: 1.6rem;
+  }
 }
 
 .home__about {
