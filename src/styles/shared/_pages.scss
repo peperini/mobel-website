@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 %page {
-  @extend %cover;
+  @include cover;
 
   opacity: 0;
   visibility: hidden;

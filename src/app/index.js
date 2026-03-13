@@ -1,5 +1,8 @@
 import '@styles/index.scss'
 import FontFaceObserver from 'fontfaceobserver'
+import { initGUI } from './utils/grid-overlay.js';
+
+initGUI();
 
 class App {
 

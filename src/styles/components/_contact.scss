@@ -10,7 +10,7 @@
 }
 
 .background__video {
-  @extend %cover;
+  @include cover;
 
   object-fit: cover;
   z-index: -1;

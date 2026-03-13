@@ -3,10 +3,11 @@
 
 .header {
   // @extend %cover;
-  @extend %center;
+  @include center;
 
-  width: 100%;
-  padding: 2.5rem 2rem;
+  inline-size: 100%;
+  padding-inline: $spacing-desktop-2;
+  padding-block: $spacing-desktop-2;
   justify-content: space-between;
   /*pointer-events: none;*/
   position: fixed;
@@ -18,7 +19,7 @@
 }
 
 .header__nav {
-  @extend %center;
+  @include center;
 
   gap: 37.6rem;
 }
@@ -33,7 +34,7 @@
 }
 
 .header__navList {
-  @extend %center;
+  @include center;
 
   gap: 2rem;
 }
@@ -47,13 +48,13 @@
 }
 
 .header__actions {
-  @extend %center;
+  @include center;
 
   gap: 3rem;
 }
 
 .actions__langList {
-  @extend %center;
+  @include center;
 
   gap: 0.5rem;
 }

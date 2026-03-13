@@ -10,42 +10,44 @@
 }
 
 .home__wrapper {
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .home__hero {
-  @extend %center;
+  @include grid;
 
   position: relative;
-  width: 100%;
-  height: 100vh;
+  inline-size: 100%;
+  block-size: 100dvh;;
 }
 
 .home__hero__title {
   @extend %heading-2;
 
-  width: 97.3rem;
   text-align: center;
+  grid-column: 3 / span 8;
+  align-self: center;
 
   @include media('<phone') {
     font-size: 3.2rem;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 1;
   }
 }
 
 .home__hero__gallery {
-
+  @include cover;
+  @include grid;
 }
 
 .hero__gallery__media {
   position: absolute;
 
   &--1 {
-    width: 18.2rem;
-    height: 25rem;
-    right: 6.7rem;
-    top: 30.4rem;
+    inline-size: 18rem;
+    grid-column: 11;
+    inset-block-start: 31.6%;
 
     @include media('<phone') {
       width: 10rem;
@@ -56,10 +58,10 @@
   }
 
   &--2 {
-    width: 23rem;
-    height: 16.9rem;
-    bottom: 12.3rem;
-    right: 26.7rem;
+    inline-size: 23rem;
+    block-size: 16.9rem;
+    grid-column: 9;
+    inset-block-end: 12.8%;
 
     @include media('<phone') {
       width: 12.9375rem;
@@ -70,10 +72,10 @@
   }
 
   &--3   {
-    width: 18rem;
-    height: 22.5rem;
-    bottom: 5.4rem;
-    left: 26.9rem;
+    inline-size: 18rem;
+    block-size: 22.5rem;
+    grid-column: 3;
+    inset-block-end: 5.6%;
 
     @include media('<phone') {
       width: 9rem;
@@ -84,10 +86,10 @@
   }
 
   &--4 {
-    width: 15rem;
-    height: 20rem;
-    top: 22.9rem;
-    left: 0;
+    inline-size: 15rem;
+    block-size: 20rem;
+    inset-block-start: 22.5%;
+    inset-inline-start: 0;
 
     @include media('<phone') {
       width: 8.4375rem;
@@ -98,10 +100,10 @@
   }
 
   &--5 {
-    width: 17rem;
-    height: 11.4rem;
-    top: 13.5rem;
-    left: 51.7rem;
+    inline-size: 17rem;
+    block-size: 11.4rem;
+    grid-column: 5;
+    inset-block-start: 13.5%;
 
     @include media('<phone') {
       width: 8.5463rem;
@@ -113,10 +115,10 @@
   }
 
   &--6 {
-    width: 13rem;
-    height: 16.7rem;
-    top: 15.1rem;
-    right: 49.2rem;
+    inline-size: 13rem;
+    block-size: 16.7rem;
+    grid-column: 8;
+    inset-block-start: 15.5%;
 
     @include media('<phone') {
       width: 7.3115rem;
@@ -126,10 +128,10 @@
   }
 
   &--7 {
-    width: 15rem;
-    height: 11.3rem;
-    top: 20.2rem;
-    left: 39.3rem;
+    inline-size: 15rem;
+    block-size: 11.3rem;
+    grid-column: 4;
+    inset-block-start: 20.7%;
 
     @include media('<phone') {
       width: 7.5rem;
@@ -140,10 +142,10 @@
   }
 
   &--8 {
-    width: 9rem;
-    height: 9rem;
-    top: 9rem;
-    left: 138.8rem;
+    inline-size: 9rem;
+    block-size: 9rem;
+    inset-block-start: 9.7%;
+    grid-column: 12;
 
     @include media('<phone') {
       width: 5.5rem;
@@ -154,10 +156,10 @@
   }
 
   &--9 {
-    width: 9rem;
-    height: 9rem;
-    left: 14.4rem;
-    bottom: 36.8rem;
+    inline-size: 9rem;
+    block-size: 9rem;
+    grid-column: 2;
+    inset-block-end: 38.3%;
 
     @include media('<phone') {
       width: 6.75rem;
@@ -168,10 +170,10 @@
   }
 
   &--10 {
-    width: 9rem;
-    height: 8.5rem;
-    left: 51.7rem;
-    bottom: 27.7rem;
+    inline-size: 9rem;
+    block-size: 8.5rem;
+    grid-column: 5;
+    inset-block-end: 25%;
 
     @include media('<phone') {
       width: 6.75rem;
@@ -182,10 +184,10 @@
   }
 
   &--11 {
-    width: 8rem;
-    height: 10.1rem;
-    right: -2.3rem;
-    bottom: 26.1rem;
+    inline-size: 8rem;
+    block-size: 10.1rem;
+    inset-block-end: 25%;
+    inset-inline-end: -1.3rem;
 
     @include media('<phone') {
       width: 6rem;
@@ -197,9 +199,9 @@
 }
 
 .hero__gallery__media__img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  inline-size:  100%;
+  block-size:   100%;
+  object-fit:   cover;
 }
 
 .home__hero__bottom, .home__brands__bottom {
@@ -207,12 +209,12 @@
   align-items: flex-end;
   justify-content: space-between;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 2.5rem 2rem;
+  inset-block-end: $spacing-desktop-2;
+  inset-inline: $spacing-desktop-2;
 
   @include media('<phone') {
-    padding: 2rem 1rem;
+    inset-block-end: $spacing-mobile-2;
+    inset-inline: $spacing-mobile-2;
     align-items: center;
   }
 }
@@ -242,7 +244,7 @@
 }
 
 .hero__bottom__link, .brands__bottom__link {
-  @extend %center;
+  @include center;
 
   width: 22.9rem;
   justify-content: flex-end;
@@ -254,7 +256,7 @@
 }
 
 .home__about {
-  @extend %center;
+  @include center;
 
   position: relative;
   flex-direction: column;
@@ -302,14 +304,14 @@
 }
 
 .products__header__link {
-  @extend %center;
+  @include center;
 
   justify-content: flex-start;
   gap: 1rem;
 }
 
 .home__products__slider {
-  @extend %center;
+  @include center;
 
   width: 72.6rem;
   height: 100%;
@@ -349,7 +351,7 @@
 }
 
 .slider__category__media {
-  @extend %cover;
+  @include cover;
 
   &--1 img {
     position: absolute;
@@ -381,7 +383,7 @@
 }
 
 .home__brands {
-  @extend %center;
+  @include center;
 
   position: relative;
   width: 100%;
@@ -411,13 +413,13 @@
 }
 
 .content__card__media {
-  @extend %cover;
-  @extend %center;
+  @include cover;
+  @include center;
 }
 
 .content__card__media__img {
-  @extend %cover;
-
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 

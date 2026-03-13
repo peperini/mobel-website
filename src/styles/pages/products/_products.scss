@@ -14,7 +14,7 @@
 }
 
 .products__list {
-  @extend %center;
+  @include center;
 
   width: 100%;
   padding: 14rem 2rem 5rem 2rem;
@@ -23,7 +23,7 @@
 }
 
 .products__list__filters {
-  @extend %center;
+  @include center;
 
   gap: 3rem;
 }
