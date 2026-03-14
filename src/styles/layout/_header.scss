@@ -2,40 +2,50 @@
 @use '../shared' as *;
 
 .header {
-  // @extend %cover;
-  @include center;
+  /* @include cover; */
+  @include grid;
 
+  position: fixed;
   inline-size: 100%;
-  padding-inline: $spacing-desktop-2;
-  padding-block: $spacing-desktop-2;
+  padding: $spacing-desktop-2;
   justify-content: space-between;
   /*pointer-events: none;*/
-  position: fixed;
   z-index: z('header');
 
   @include media('<phone') {
-    padding: 2rem 1rem;
+    padding: $spacing-mobile-2;
   }
 }
 
 .header__nav {
   @include center;
 
-  gap: 37.6rem;
+  justify-content: left;
+  grid-column: 5 / span 3;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .header__nav__logoLink {
-
+  grid-column: 1 / span 2;
 }
 
 .header__logo {
-  width: 12rem;
-  height: 3.6rem;
+  inline-size: 12rem;
+  block-size: auto;
+
+  @include media('<phone') {
+    inline-size: 9rem;
+    block-size: auto;
+  }
 }
 
 .header__navList {
   @include center;
 
+  justify-content: left;
   gap: 2rem;
 }
 
@@ -50,7 +60,9 @@
 .header__actions {
   @include center;
 
-  gap: 3rem;
+  grid-column: 13 / 9;
+  justify-content: end;
+  gap: $spacing-mobile-2;
 }
 
 .actions__langList {
@@ -68,7 +80,19 @@
 }
 
 .actions__cta {
+  display: block;
 
+  @include media('<phone') {
+    display: none;
+  }
+}
+
+.actions__menu {
+  display: none;
+
+  @include media('<phone') {
+    display: block;
+  }
 }
 
 .actions__cta__text {

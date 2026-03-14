@@ -1,4 +1,4 @@
-// PRIMITIVES
+// ———— Color Primitives ———————————————————————————————————————————————————————————————————————————
 $color-vista-white: #FCFAF8;
 $color-pearl-bush: #ECE6DA;
 $color-cod-gray: #131313;
@@ -19,7 +19,7 @@ $color-gray-100: #E6E6E6;
 $color-gray-50: #F2F2F2;
 $color-gray-0: #FFFFFF;
 
-// TOKENS
+// ———— Color Tokens ———————————————————————————————————————————————————————————————————————————
 $color-surface-primary: $color-vista-white;
 $color-surface-secondary: $color-pearl-bush;
 $color-surface-accent: $color-just-blue;
@@ -30,34 +30,33 @@ $color-text-accent: $color-just-blue;;
 $color-border: $color-cod-gray;
 $color-border-invert: $color-vista-white;
 
-// MOBILE SPACING TOKENS
+// ———— Spacing Mobile ———————————————————————————————————————————————————————————————————————————
 $spacing-mobile-0: 4px;
 $spacing-mobile-1: 8px;
 $spacing-mobile-2: 16px;
 $spacing-mobile-3: 24px;
 $spacing-mobile-4: 32px;
 
-// DESKTOP SPACING TOKENS
+// ———— Spacing Dekstop ———————————————————————————————————————————————————————————————————————————
 $spacing-desktop-0: 8px;
 $spacing-desktop-1: 16px;
 $spacing-desktop-2: 24px;
 $spacing-desktop-3: 32px;
 $spacing-desktop-4: 48px;
 
-// ——— Grids ————————————————————————————————————————————————
+// ———— Grids ———————————————————————————————————————————————————————————————————————————
 $grid-cols: 12;
 $grid-cols-size: 1fr;
-$grid-cols-gap: $spacing-desktop-1;
 
-// ANIMATIONS & EASING
+// ———— Animations & Easings ———————————————————————————————————————————————————————————————————————————
 $ease-out-expo: cubic-bezier(0.19, 1, 0.4, 1);
 $animation-primary: 0.3s cubic-bezier(.5, 0, 0, 1);
 
-// FONTS
+// ———— Fonts ———————————————————————————————————————————————————————————————————————————
 $font-montreal: 'pp_neue_montreal';
 $font-antipol: 'antipol_extended';
 
-// Z-INDEXES
+// ———— z-indexes ———————————————————————————————————————————————————————————————————————————
 $z-indexes: (
   'preloader',
   'transition',
