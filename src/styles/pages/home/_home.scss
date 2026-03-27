@@ -4,6 +4,8 @@
 .home {
   @extend %page;
 
+  transform: translateY(-500vh);
+
   &--active {
     @extend %page--active;
   }
@@ -260,11 +262,14 @@
   @include center;
 
   position: relative;
-  flex-direction: column;
   background: $color-surface-accent;
   color: $color-text-invert;
   width: 100%;
   height: 100vh;
+
+  @include media('<phone') {
+    padding: $spacing-mobile-2;
+  }
 }
 
 .home__about__title {
@@ -272,36 +277,63 @@
 
   text-align: center;
   width: 122.4rem;
+
+  @include media('<phone') {
+    font-size: 5rem;
+    inline-size: 100%;
+    letter-spacing: -2%;
+  }
 }
 
 .home__about__cta {
   @extend %button-inverted--big;
 
   position: absolute;
-  bottom: 2.5rem;
+  inset-block-end: $spacing-desktop-2;
+
+  @include media('<phone') {
+    inset-block-end: $spacing-mobile-2;
+  }
 }
 
 .home__products {
   width: 100%;
+  /* height: auto; */
   height: 100vh;
-  padding: 2.5rem 2rem;
+  padding: $spacing-desktop-2;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   overflow: hidden;
+
+  @include media('<phone') {
+    padding: $spacing-mobile-2;
+    flex-direction: column;
+    gap: $spacing-mobile-2;
+  }
 }
 
 .home__products__header {
   width: 60.2rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: $spacing-desktop-2;
+
+  @include media('<phone') {
+    inline-size: 100%;
+    gap: $spacing-mobile-2;
+  }
 }
 
 .products__header__title {
   @extend %heading-2;
 
   margin-left: -0.5rem;
+
+  @include media('<phone') {
+    font-size: 5rem;
+    font-weight: 400;
+  }
 }
 
 .products__header__link {
@@ -318,7 +350,13 @@
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: $spacing-desktop-2;
+
+  @include media('<phone') {
+    inline-size: 100%;
+    gap: $spacing-mobile-2;
+    font-size: 1.6rem;
+  }
 }
 
 .products__slider__category {
@@ -328,9 +366,10 @@
   justify-content: flex-end;
   flex-shrink: 0;
   border-radius: 0.5rem;
-  padding: 1.6rem 1.7rem;
+  padding: $spacing-desktop-1;
   background: $color-surface-secondary;
   width: 100%;
+  overflow: hidden;
 
   &--1 {
     height: 44.1rem;
@@ -349,6 +388,10 @@
   &--4 {
     height: 38.9rem;
   }
+
+  @include media('<phone') {
+    padding: $spacing-mobile-1;
+  }
 }
 
 .slider__category__media {
@@ -360,6 +403,16 @@
     left: 50%;
     transform: translateX(-50%);
     width: 44rem;
+  }
+
+  @include media('<phone') {
+    &--2 img, &--3 img, &--4 img {
+      width: 150%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -373,6 +426,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  @include media('<phone') {
+    gap: 0;
+  }
 }
 
 .category__info__title {
@@ -390,27 +447,47 @@
   width: 100%;
   height: 100vh;
   background: $color-surface-secondary;
-  padding: 2.5rem 2rem;
+  padding: $spacing-desktop-2;
+
+  @include media('<phone') {
+    padding: $spacing-mobile-2;
+  }
 }
 
 .home__brands__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  inline-size: 100%;
+
+  @include media('<phone') {
+    flex-direction: column;
+    gap: $spacing-mobile-2;
+  }
 }
 
 .brands__content__title-left {
   @extend %heading-2;
 
-  width: 35.3rem;
+  inline-size: 35.3rem;
   flex-shrink: 0;
+
+  @include media('<phone') {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 400;
+    inline-size: 100%;
+  }
 }
 
 .brands__content__cards__collection {
   width: 47.8rem;
   height: 28.9rem;
   position: relative;
+
+  @include media('<phone') {
+    inline-size: 100%;
+  }
 }
 
 .content__card__media {
@@ -426,12 +503,24 @@
 
 .content__card__media__logo {
   position: absolute;
+
+  @include media('<phone') {
+    inline-size: 15rem;
+    block-size: auto;
+  }
 }
 
 .brands__content__title-right {
   @extend %heading-2;
 
-  width: 35.3rem;
+  inline-size: 35.3rem;
   flex-shrink: 0;
   text-align: right;
+
+  @include media('<phone') {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 400;
+    inline-size: 100%;
+  }
 }

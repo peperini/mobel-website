@@ -75,8 +75,12 @@
   @extend %small-text;
 }
 
-.actions__langList__item__div {
+.actions__langList__item span {
 
+}
+
+.actions__langList__item__div {
+  @extend %small-text;
 }
 
 .actions__cta {

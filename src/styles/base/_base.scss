@@ -36,7 +36,7 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @include media('<phone') {
-    font-size: calc(100vw / 393 * 10)
+    font-size: calc(100vw / 440 * 10)
   }
 }
 
