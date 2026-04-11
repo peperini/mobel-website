@@ -2,8 +2,8 @@
 @use '../utils' as *;
 
 .preloader {
-  @extend %center;
-  @extend %cover;
+  @include center;
+  @include cover;
   @extend %page;
 
 

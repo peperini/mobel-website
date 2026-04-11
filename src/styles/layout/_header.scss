@@ -2,35 +2,50 @@
 @use '../shared' as *;
 
 .header {
-  // @extend %cover;
-  @extend %center;
+  /* @include cover; */
+  @include grid;
 
-  width: 100%;
-  padding: 2.5rem 2rem;
+  position: fixed;
+  inline-size: 100%;
+  padding: $spacing-desktop-2;
   justify-content: space-between;
   /*pointer-events: none;*/
-  position: fixed;
   z-index: z('header');
+
+  @include media('<phone') {
+    padding: $spacing-mobile-2;
+  }
 }
 
 .header__nav {
-  @extend %center;
+  @include center;
 
-  gap: 37.6rem;
+  justify-content: left;
+  grid-column: 5 / span 3;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .header__nav__logoLink {
-
+  grid-column: 1 / span 2;
 }
 
 .header__logo {
-  width: 12rem;
-  height: 3.6rem;
+  inline-size: 12rem;
+  block-size: auto;
+
+  @include media('<phone') {
+    inline-size: 9rem;
+    block-size: auto;
+  }
 }
 
 .header__navList {
-  @extend %center;
+  @include center;
 
+  justify-content: left;
   gap: 2rem;
 }
 
@@ -43,13 +58,15 @@
 }
 
 .header__actions {
-  @extend %center;
+  @include center;
 
-  gap: 3rem;
+  grid-column: 13 / 9;
+  justify-content: end;
+  gap: $spacing-mobile-2;
 }
 
 .actions__langList {
-  @extend %center;
+  @include center;
 
   gap: 0.5rem;
 }
@@ -58,12 +75,28 @@
   @extend %small-text;
 }
 
-.actions__langList__item__div {
+.actions__langList__item span {
 
 }
 
-.actions__cta {
+.actions__langList__item__div {
+  @extend %small-text;
+}
 
+.actions__cta {
+  display: block;
+
+  @include media('<phone') {
+    display: none;
+  }
+}
+
+.actions__menu {
+  display: none;
+
+  @include media('<phone') {
+    display: block;
+  }
 }
 
 .actions__cta__text {

@@ -3,24 +3,30 @@
 
 .contact {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 5rem 2rem;
+  inline-size: 100%;
+  block-size: 100vh;
+  padding: $spacing-desktop-2;
   overflow: hidden;
+
+  @include media('<phone') {
+    padding: $spacing-mobile-2;
+  }
 }
 
 .background__video {
-  @extend %cover;
+  @include cover;
 
   object-fit: cover;
   z-index: -1;
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .contact__wrapper {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -28,10 +34,14 @@
 }
 
 .contact__subtitle {
-  width: 100%;
+  inline-size: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: $spacing-desktop-2;
+
+  @include media('<phone') {
+    gap: $spacing-mobile-2;
+  }
 }
 
 .contact__subtitle__text {
@@ -41,8 +51,8 @@
 }
 
 .contact__subtitle__divider {
-  width: 100%;
-  height: 1px;
+  inline-size: 100%;
+  block-size: 1px;
   background: $color-border-invert;
 }
 
@@ -50,8 +60,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2.5rem;
-  width: 100%;
+  gap: $spacing-desktop-2;
+  inline-size: 100%;
+
+  @include media('<phone') {
+    gap: $spacing-mobile-2;
+  }
 }
 
 .contact__content__title {
@@ -59,6 +73,11 @@
 
   color: $color-text-invert;
   margin-left: -1.2rem;
+
+  @include media('<phone') {
+    font-size: 5rem;
+    margin-left: -0.6rem;
+  }
 }
 
 .contact__content__cta {

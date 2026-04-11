@@ -3,7 +3,7 @@
 
 %button-base {
   @extend %small-text;
-  @extend %center;
+  @include center;
 
   cursor: pointer;
   line-height: 1;
@@ -36,7 +36,7 @@
 
 %button-inverted {
   @extend %small-text;
-  @extend %center;
+  @include center;
 
   cursor: pointer;
   line-height: 1;
@@ -87,7 +87,7 @@
 
 %button-inverted--big {
   @extend %body-text;
-  @extend %center;
+  @include center;
 
   cursor: pointer;
   line-height: 1;

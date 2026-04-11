@@ -1,16 +1,29 @@
 @use 'variables' as *;
+@use 'responsive' as *;
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat($grid-cols, $grid-cols-size);
+  gap: $spacing-desktop-1;
+  padding-inline: $spacing-desktop-2;
+  padding-block: $spacing-desktop-2;
+
+  @include media('<phone') {
+    grid-template-columns: $grid-cols-size;
+    gap: $spacing-mobile-1;
+    padding-inline: $spacing-mobile-2;
+    padding-block: $spacing-mobile-2;
+  }
+}
 
 @mixin focus-ring($color: $color-outrageous-orange) {
   outline: 0.2rem solid $color;
   outline-offset: 0.2rem;
 }
 
-%cover {
+@mixin cover {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
 }
 
 @mixin ratio($width, $height) {
@@ -26,7 +39,7 @@
   }
 }
 
-%center {
+@mixin center {
   display: flex;
   align-items: center;
   justify-content: center;
