@@ -10,59 +10,97 @@
 }
 
 .products__wrapper {
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .products__list {
   @include center;
 
-  width: 100%;
-  padding: 14rem 2rem 5rem 2rem;
+  inline-size: 100%;
+  padding: $spacing-desktop-2;
+  margin-block-start: 15%;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: $spacing-desktop-2;
+
+  @include media('<phone') {
+    gap: $spacing-mobile-2;
+    padding: $spacing-mobile-2;
+    margin-block-start: 15%;
+  }
 }
 
 .products__list__filters {
   @include center;
 
-  gap: 3rem;
+  gap: $spacing-desktop-2;
+
+  @include media('<phone') {
+    gap: $spacing-mobile-2;
+  }
 }
 
 .list__filters__filter {
   display: flex;
   align-items: flex-start;
-  gap: 0.6rem;
+  gap: $spacing-desktop-0;
 
   &:not(:first-child) {
     color: $color-gray-400;
+
+    @include media('<phone') {
+      display: none;
+    }
+  }
+
+  @include media('<phone') {
+    gap: $spacing-mobile-0;
   }
 }
 
 .filter__text {
   @extend %heading-5;
+
+  @include media('<phone') {
+    font-size: 2rem;
+  }
 }
 
 .filter__number {
   @extend %small-text;
+
+  @include media('<phone') {
+    font-size: 1.1rem;
+  }
 }
 
 .products__list__gallery {
   display: flex;
-  gap: 2rem;
+  gap: $spacing-desktop-1;
   flex-wrap: wrap;
+
+  @include media('<phone') {
+    gap: $spacing-mobile-1;
+  }
 }
 
 .products__gallery__media {
-  width: 35.3rem;
-  height: 36.9rem;
+  inline-size: calc(25% - $spacing-desktop-1 * 0.75);
+  block-size: 36.9rem;
+
+  @include media('<phone') {
+    inline-size: calc(50% - $spacing-mobile-1 * 0.5);
+  }
 }
 
 .products__gallery__media__image {
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 
 .products__list__link {
-
+  @include media('<phone') {
+    font-size: 1.6rem;
+  }
 }

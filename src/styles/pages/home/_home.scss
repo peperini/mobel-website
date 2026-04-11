@@ -4,8 +4,6 @@
 .home {
   @extend %page;
 
-  transform: translateY(-500vh);
-
   &--active {
     @extend %page--active;
   }
