@@ -4,8 +4,6 @@
 .preloader {
   @include center;
   @include cover;
-  @extend %page;
-
 
   background: $color-surface-primary;
   z-index: z('preloader');

@@ -1,0 +1,166 @@
+import AutoBind from 'auto-bind'
+import EventEmitter from 'events'
+import Prefix from 'prefix'
+
+import each from 'lodash/each'
+
+import { Detection } from '@classes/Detection';
+
+import { clamp, lerp } from '@utils/math'
+
+export default class Page extends EventEmitter {
+  constructor({ classes, element, elements, isScrollable = true}) {
+    super()
+
+    AutoBind(this)
+
+    this.classes = {
+      ...classes,
+    }
+
+    this.selectors = {
+      element,
+      elements: {
+        footer: '.footer',
+
+        ...elements
+      }
+    }
+
+    this.scroll = {
+      ease: 0.07,
+      position: 0,
+      current: 0,
+      target: 0,
+      limit: 0
+    }
+
+    this.isScrollable = isScrollable
+
+    this.transformPrefix = Prefix('transform')
+
+    this.create()
+  }
+
+  create () {
+    this.element = document.querySelector(this.selectors.element);
+    this.elements = {};
+
+    each(this.selectors.elements, (selector, key) => {
+      if (
+        selector instanceof window.HTMLElement ||
+        selector instanceof window.NodeList
+      ) {
+        this.elements[key] = selector;
+      } else if (Array.isArray(selector)) {
+        this.elements[key] = selector;
+      } else {
+        this.elements[key] = this.element.querySelectorAll(selector);
+
+        if (this.elements[key].length === 0) {
+          this.elements[key] = null;
+        } else if (this.elements[key].length === 1) {
+          this.elements[key] = this.element.querySelector(selector);
+        }
+      }
+    });
+
+    if (this.isScrollable) {
+      this.scroll = {
+        ease: 0.07,
+        position: 0,
+        current: 0,
+        target: 0,
+        limit: this.elements.wrapper.clientHeight - window.innerHeight
+      }
+    }
+  }
+
+  // ———— Scroll ———————————————————————————————————————————————————————————————————————————
+  reset() {
+    this.scroll = {
+      ease: 0.07,
+      position: 0,
+      current: 0,
+      target: 0,
+      limit: 0,
+    };
+  }
+
+  set(value) {
+    this.scroll.current = this.scroll.target = this.scroll.last = value;
+
+    this.transform(this.elements.wrapper, this.scroll.current);
+  }
+
+  transform(element, y) {
+    element.style[this.transformPrefix] = `translate3d(0, ${-Math.round(
+      y,
+    )}px, 0)`;
+  }
+
+  // ———— Events ———————————————————————————————————————————————————————————————————————————
+  onResize() {
+    if (!this.elements.wrapper) return;
+
+    window.requestAnimationFrame(() => {
+      this.scroll.limit = this.elements.wrapper.clientHeight - window.innerHeight;
+    });
+  }
+
+  onTouchDown(event) {
+    this.isDown = true
+
+    this.scroll.position = this.scroll.current
+    this.start = event.touches ? event.touches[0].clientY : event.clientY
+  }
+
+  onTouchMove(event) {
+    if (!this.isDown) return
+
+    const y = event.touches ? event.touches[0].clientY : event.clientY
+    const distance = (this.start - y) * 3
+
+    this.scroll.target = this.scroll.position + distance
+  }
+
+  onTouchUp () {
+    this.isDown = false
+  }
+
+  onWheel(normalized) {
+    const speed = normalized.pixelY
+
+    this.scroll.target += speed
+
+    return speed
+  }
+
+  // ———— Listeners ———————————————————————————————————————————————————————————————————————————
+
+  addEventListeners () {}
+
+  removeEventListeners () {}
+
+  // ———— Frames ———————————————————————————————————————————————————————————————————————————
+  update() {
+    this.scroll.target = clamp(0, this.scroll.limit, this.scroll.target)
+
+    this.scroll.current = lerp(
+      this.scroll.current,
+      this.scroll.target,
+      this.scroll.ease
+    )
+    this.scroll.current = Math.floor(this.scroll.current)
+
+    if (this.scroll.current < 0.1) {
+      this.scroll.current = 0
+    }
+
+    if (this.elements.wrapper) {
+      this.transform(this.elements.wrapper, this.scroll.current)
+    }
+
+    this.scroll.last = this.scroll.current
+  }
+}
