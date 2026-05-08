@@ -8,7 +8,7 @@ import initGUI from './utils/grid-overlay'
 
 import { Detection } from '@classes/Detection';
 
-/* import Navigation from '@components/Navigation' */
+import Navigation from '@components/Navigation'
 import Preloader from '@components/Preloader'
 
 import About from '@pages/About'
@@ -30,10 +30,17 @@ class App {
   init() {
     this.createPreloader()
 
+    this.createNavigation()
     this.createPages()
 
-    this.addEventListeners();
-    this.addLinkListeners();
+    this.addEventListeners()
+    this.addLinkListeners()
+  }
+
+  createNavigation () {
+    this.navigation = new Navigation({
+      template: this.template
+    })
   }
 
   createPreloader () {
@@ -88,7 +95,7 @@ class App {
 
     this.page.hide()
 
-    /* this.navigation.onChange(this.template) */
+    this.navigation.onChange(this.template)
 
     this.page = page
     this.page.show()
@@ -97,6 +104,10 @@ class App {
   onResize () {
     if (this.page && this.page.onResize) {
       this.page.onResize()
+    }
+
+    if (this.navigation && this.navigation.onResize) {
+      this.navigation.onResize()
     }
   }
 
