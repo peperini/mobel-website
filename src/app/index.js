@@ -10,6 +10,7 @@ import { Detection } from '@classes/Detection';
 
 import Navigation from '@components/Navigation'
 import Preloader from '@components/Preloader'
+import Transition from '@components/Transition'
 
 import About from '@pages/About'
 import Home from '@pages/Home'
@@ -30,6 +31,7 @@ class App {
   init() {
     this.createPreloader()
 
+    this.createTransitions()
     this.createNavigation()
     this.createPages()
 
@@ -47,6 +49,10 @@ class App {
     this.preloader = new Preloader()
 
     this.preloader.once('completed', this.onPreloaded)
+  }
+
+  createTransitions () {
+    this.transition = new Transition()
   }
 
   createPages () {
@@ -87,6 +93,8 @@ class App {
 
     const page = this.pages[url]
 
+    await this.transition.hide({ element: this.page.element })
+
     if (push) {
       window.history.pushState({}, '', url)
     }
@@ -99,6 +107,10 @@ class App {
 
     this.page = page
     this.page.show()
+
+    this.onResize();
+
+    this.transition.show({ element: this.page.element })
   }
 
   onResize () {

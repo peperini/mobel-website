@@ -1,9 +1,7 @@
 import GSAP from 'gsap'
 
 import Component from '@classes/Component'
-
 import Dots from '@animations/Dots'
-import autoBind from 'auto-bind'
 
 export default class Navigation extends Component {
   constructor({ template }) {
