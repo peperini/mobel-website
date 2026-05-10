@@ -5,7 +5,7 @@
       .home__hero__gallery
         each media, index in assets.home.hero.gallery
           figure.hero__gallery__media(class=`hero__gallery__media--${index + 1}`)
-            img.hero__gallery__media__img(alt=media.image.alt src=media.image.url)
+            img.hero__gallery__media__img(alt=media.image.alt data-src=media.image.url)
       .home__hero__bottom
         .home__hero__bottom__logo
           svg.millerKnollLogo(width="192" height="20" viewBox="0 0 192 20" fill="none")
@@ -53,7 +53,7 @@
         each media, index in assets.home.products.slider
           .products__slider__category(class=`products__slider__category--${index + 1}`)
             figure.slider__category__media(class=`slider__category__media--${index + 1}`)
-              img.slider__category__media__img(alt=media.image.alt src=media.image.url)
+              img.slider__category__media__img(alt=media.image.alt data-src=media.image.url)
             .slider__category__info
               p.category__info__title!=media.text.title
               p.category__info__description!=media.text.description
@@ -64,8 +64,8 @@
         .brands__content__cards__collection
           each brand in assets.home.brands.cards
             figure.content__card__media
-              img.content__card__media__img(alt=brand.image.alt src=brand.image.url)
-              img.content__card__media__logo(alt=brand.logo.alt src=brand.logo.url)
+              img.content__card__media__img(alt=brand.image.alt data-src=brand.image.url)
+              img.content__card__media__logo(alt=brand.logo.alt data-src=brand.logo.url)
         h3.brands__content__title-right Best <br> Brands
       .home__brands__bottom
         .home__brands__bottom__logo

@@ -2,10 +2,12 @@ import AutoBind from 'auto-bind'
 import EventEmitter from 'events'
 import Prefix from 'prefix'
 
+import AsyncLoad from '@classes/AsyncLoad';
+import { Detection } from '@classes/Detection'
+
 import each from 'lodash/each'
 
-import { Detection } from '@classes/Detection';
-
+import { mapEach } from '@utils/dom'
 import { clamp, lerp } from '@utils/math'
 
 export default class Page extends EventEmitter {
@@ -21,6 +23,8 @@ export default class Page extends EventEmitter {
     this.selectors = {
       element,
       elements: {
+        preloaders: '[data-src]',
+
         footer: '.footer',
 
         ...elements
@@ -74,6 +78,17 @@ export default class Page extends EventEmitter {
         limit: this.elements.wrapper.clientHeight - window.innerHeight
       }
     }
+
+    this.createPreloaders();
+  }
+
+  // ———— Img Preloaders ———————————————————————————————————————————————————————————————————————————
+  createPreloaders() {
+    this.preloaders = mapEach(this.elements.preloaders, element => {
+      return new AsyncLoad({
+        element
+      })
+    })
   }
 
   // ———— Scroll ———————————————————————————————————————————————————————————————————————————
