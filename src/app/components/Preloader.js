@@ -37,7 +37,7 @@ export default class Preloader extends Component {
     this.assets = this.getAssets()
 
     GSAP.set(this.medias, {
-      clipPath: 'inset(100% 0% 0% 0%)',
+      clipPath: 'inset(0% 0% 100% 0%)',
       zIndex: index => index + 1
     })
 
@@ -86,9 +86,10 @@ export default class Preloader extends Component {
       const media = this.medias[this.revealed]
 
       GSAP.to(media, {
+        delay: 0.25,
         clipPath: 'inset(0% 0% 0% 0%)',
-        duration: 0.35,
-        ease: 'sine.out',
+        duration: 1.25,
+        ease: 'expo.inOut',
       })
 
       this.revealed += 1
@@ -98,7 +99,7 @@ export default class Preloader extends Component {
   transitionToHero () {
     const fragment = document.createDocumentFragment()
     const timeline = GSAP.timeline({
-      delay: 0.25,
+      delay: 1.75,
       onComplete: () => {
         this.destroy()
       }
