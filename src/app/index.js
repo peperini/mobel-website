@@ -37,6 +37,8 @@ class App {
 
     this.addEventListeners()
     this.addLinkListeners()
+
+    this.onResize();
   }
 
   createNavigation () {
