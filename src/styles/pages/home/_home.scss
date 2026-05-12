@@ -294,14 +294,21 @@
 }
 
 .home__products {
+  position: relative;
   width: 100%;
-  /* height: auto; */
+  height: var(--home-products-height, 100vh);
+  overflow: visible;
+}
+
+.home__products__pin {
   height: 100vh;
   padding: $spacing-desktop-2;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   overflow: hidden;
+  transform: translate3d(0, var(--home-products-pin-y, 0px), 0);
+  will-change: transform;
 
   @include media('<phone') {
     padding: $spacing-mobile-2;
@@ -341,16 +348,23 @@
 }
 
 .home__products__slider {
-  @include center;
-
   width: 72.6rem;
   height: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: $spacing-desktop-2;
+  overflow: visible;
 
   @include media('<phone') {
     inline-size: 100%;
+  }
+}
+
+.home__products__slider__track {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-desktop-2;
+  transform: translate3d(0, calc(var(--home-products-slider-y, 0px) * -1), 0);
+  will-change: transform;
+
+  @include media('<phone') {
     gap: $spacing-mobile-2;
     font-size: 1.6rem;
   }

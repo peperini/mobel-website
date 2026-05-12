@@ -254,6 +254,10 @@
 
 .copyRight__socials__link {
   flex-shrink: 0;
+
+  & svg path {
+    fill: $color-vista-white;
+  }
 }
 
 .linkedin {
