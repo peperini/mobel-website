@@ -91,5 +91,11 @@
   &:focus-visible {
     color: $hover;
     text-decoration: $hover;
+
+    &.arrow-link {
+      & svg path {
+        fill: $hover;
+      }
+    }
   }
 }

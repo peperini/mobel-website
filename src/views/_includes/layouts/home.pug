@@ -32,31 +32,33 @@
             path(d="M145.573 11.5802C145.573 11.8602 145.573 12.1402 145.553 12.3002H137.473C137.493 14.3602 138.593 16.3002 140.993 16.3002C143.093 16.3002 143.913 14.8602 144.113 14.0202H145.433C144.933 15.8802 143.533 17.4202 140.973 17.4202C137.853 17.4202 136.113 15.1402 136.113 12.0402C136.113 8.78018 138.033 6.68018 140.973 6.68018C143.913 6.68018 145.573 8.74018 145.573 11.5802ZM137.473 11.1602H144.193C144.193 9.34018 143.013 7.80018 140.913 7.80018C138.933 7.80018 137.573 9.26018 137.473 11.1602Z" fill="#131313")
             path(d="M128.868 17.4001C124.988 17.4001 122.308 14.3401 122.308 10.0001C122.308 5.68008 124.968 2.58008 128.888 2.58008C132.228 2.58008 134.408 4.72008 134.768 7.40008H133.248C132.968 5.80008 131.788 3.86008 128.868 3.86008C125.408 3.86008 123.828 6.80008 123.828 10.0001C123.828 13.2001 125.428 16.1201 128.868 16.1201C131.888 16.1201 133.148 14.0401 133.308 12.0601H134.828C134.488 15.1801 132.268 17.4001 128.868 17.4001Z" fill="#131313")
         p.hero__bottom__subtext From iconic designs to tailored solutions, Möbel brings the best of MillerKnoll to businesses and homes across Quebec.
-        a.hero__bottom__link(data-animation="paragraph" href="/products")
+        a.hero__bottom__link.arrow-link(data-animation="paragraph" href="/products")
           span See our products
           svg(width="22" height="8" viewBox="0 0 22 8" fill="none")
             path(d="M21.4346 4.03553C21.6299 3.84027 21.6299 3.52368 21.4346 3.32842L18.2527 0.146441C18.0574 -0.048821 17.7408 -0.048821 17.5455 0.146441C17.3503 0.341703 17.3503 0.658286 17.5455 0.853548L20.374 3.68197L17.5455 6.5104C17.3503 6.70566 17.3503 7.02225 17.5455 7.21751C17.7408 7.41277 18.0574 7.41277 18.2527 7.21751L21.4346 4.03553ZM0 3.68198L5.75642e-08 4.18198L21.0811 4.18197L21.0811 3.68197L21.0811 3.18197L-5.75642e-08 3.18198L0 3.68198Z" fill="black")
 
     .home__about
       h2.home__about__title The MillerKnoll experience, brought to Quebec.
-      button.home__about__cta
+      a.button.home__about__cta(href="/about")
         span Learn more
 
     .home__products
-      .home__products__header
-        h3.products__header__title Everything you need for home & office
-        a.products__header__link(data-animation='paragraph' href='/products#category')
-          span Explore by category
-          svg.bottom__link__svg(width="22" height="8" viewBox="0 0 22 8" fill="none")
-            path(d="M21.4346 4.03553C21.6299 3.84027 21.6299 3.52368 21.4346 3.32842L18.2527 0.146441C18.0574 -0.048821 17.7408 -0.048821 17.5455 0.146441C17.3503 0.341703 17.3503 0.658286 17.5455 0.853548L20.374 3.68197L17.5455 6.5104C17.3503 6.70566 17.3503 7.02225 17.5455 7.21751C17.7408 7.41277 18.0574 7.41277 18.2527 7.21751L21.4346 4.03553ZM0 3.68198L5.75642e-08 4.18198L21.0811 4.18197L21.0811 3.68197L21.0811 3.18197L-5.75642e-08 3.18198L0 3.68198Z" fill="black")
-      .home__products__slider
-        each media, index in assets.home.products.slider
-          .products__slider__category(class=`products__slider__category--${index + 1}`)
-            figure.slider__category__media(class=`slider__category__media--${index + 1}`)
-              img.slider__category__media__img(alt=media.image.alt data-src=media.image.url)
-            .slider__category__info
-              p.category__info__title!=media.text.title
-              p.category__info__description!=media.text.description
+      .home__products__pin
+        .home__products__header
+          h3.products__header__title Everything you need for home & office
+          a.products__header__link.arrow-link(data-animation='paragraph' href='/products')
+            span Explore by category
+            svg.bottom__link__svg(width="22" height="8" viewBox="0 0 22 8" fill="none")
+              path(d="M21.4346 4.03553C21.6299 3.84027 21.6299 3.52368 21.4346 3.32842L18.2527 0.146441C18.0574 -0.048821 17.7408 -0.048821 17.5455 0.146441C17.3503 0.341703 17.3503 0.658286 17.5455 0.853548L20.374 3.68197L17.5455 6.5104C17.3503 6.70566 17.3503 7.02225 17.5455 7.21751C17.7408 7.41277 18.0574 7.41277 18.2527 7.21751L21.4346 4.03553ZM0 3.68198L5.75642e-08 4.18198L21.0811 4.18197L21.0811 3.68197L21.0811 3.18197L-5.75642e-08 3.18198L0 3.68198Z" fill="black")
+        .home__products__slider
+          .home__products__slider__track
+            each media, index in assets.home.products.slider
+              .products__slider__category(class=`products__slider__category--${index + 1}`)
+                figure.slider__category__media(class=`slider__category__media--${index + 1}`)
+                  img.slider__category__media__img(alt=media.image.alt data-src=media.image.url)
+                .slider__category__info
+                  p.category__info__title!=media.text.title
+                  p.category__info__description!=media.text.description
 
     .home__brands
       .home__brands__content
@@ -93,7 +95,7 @@
             path(d="M145.573 11.5802C145.573 11.8602 145.573 12.1402 145.553 12.3002H137.473C137.493 14.3602 138.593 16.3002 140.993 16.3002C143.093 16.3002 143.913 14.8602 144.113 14.0202H145.433C144.933 15.8802 143.533 17.4202 140.973 17.4202C137.853 17.4202 136.113 15.1402 136.113 12.0402C136.113 8.78018 138.033 6.68018 140.973 6.68018C143.913 6.68018 145.573 8.74018 145.573 11.5802ZM137.473 11.1602H144.193C144.193 9.34018 143.013 7.80018 140.913 7.80018C138.933 7.80018 137.573 9.26018 137.473 11.1602Z" fill="#131313")
             path(d="M128.868 17.4001C124.988 17.4001 122.308 14.3401 122.308 10.0001C122.308 5.68008 124.968 2.58008 128.888 2.58008C132.228 2.58008 134.408 4.72008 134.768 7.40008H133.248C132.968 5.80008 131.788 3.86008 128.868 3.86008C125.408 3.86008 123.828 6.80008 123.828 10.0001C123.828 13.2001 125.428 16.1201 128.868 16.1201C131.888 16.1201 133.148 14.0401 133.308 12.0601H134.828C134.488 15.1801 132.268 17.4001 128.868 17.4001Z" fill="#131313")
         p.brands__bottom__subtext From iconic designs to tailored solutions, Möbel brings the best of MillerKnoll to businesses and homes across Quebec.
-        a.brands__bottom__link(data-animation="paragraph" href="/products#brand")
+        a.brands__bottom__link.arrow-link(data-animation="paragraph" href="/products")
           span Explore by brand
           svg(width="22" height="8" viewBox="0 0 22 8" fill="none")
             path(d="M21.4346 4.03553C21.6299 3.84027 21.6299 3.52368 21.4346 3.32842L18.2527 0.146441C18.0574 -0.048821 17.7408 -0.048821 17.5455 0.146441C17.3503 0.341703 17.3503 0.658286 17.5455 0.853548L20.374 3.68197L17.5455 6.5104C17.3503 6.70566 17.3503 7.02225 17.5455 7.21751C17.7408 7.41277 18.0574 7.41277 18.2527 7.21751L21.4346 4.03553ZM0 3.68198L5.75642e-08 4.18198L21.0811 4.18197L21.0811 3.68197L21.0811 3.18197L-5.75642e-08 3.18198L0 3.68198Z" fill="black")
