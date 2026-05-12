@@ -54,6 +54,16 @@ button:focus-visible,
   @include focus-ring();
 }
 
+[data-animation='label'],
+[data-animation='paragraph'],
+[data-animation='title'] {
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+
 button, .button {
   @extend %button-base;
 }

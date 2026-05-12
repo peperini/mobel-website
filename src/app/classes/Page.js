@@ -2,6 +2,8 @@ import AutoBind from 'auto-bind'
 import EventEmitter from 'events'
 import Prefix from 'prefix'
 
+import Paragraph from '@animations/Paragraph'
+
 import AsyncLoad from '@classes/AsyncLoad';
 import { Detection } from '@classes/Detection'
 
@@ -25,6 +27,8 @@ export default class Page extends EventEmitter {
       elements: {
         preloaders: '[data-src]',
 
+        animationsParagraphs: '[data-animation="paragraph"]',
+
         footer: '.footer',
 
         ...elements
@@ -47,6 +51,8 @@ export default class Page extends EventEmitter {
   }
 
   create () {
+    this.animations = []
+
     this.element = document.querySelector(this.selectors.element);
     this.elements = {};
 
@@ -79,7 +85,16 @@ export default class Page extends EventEmitter {
       }
     }
 
+    this.createAnimations()
     this.createPreloaders();
+  }
+
+  // ———— Animations ———————————————————————————————————————————————————————————————————————————
+  createAnimations () {
+    // Paragraphs
+    this.animationsParagraphs = mapEach(this.elements.animationsParagraphs, element => {
+      return new Paragraph({ element })
+    })
   }
 
   // ———— Img Preloaders ———————————————————————————————————————————————————————————————————————————
