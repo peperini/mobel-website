@@ -4,8 +4,8 @@
       ul.products__list__filters
         each element in assets.products.productList.filters
           li.list__filters__filter
-            span.filter__text!=element.filter.name
-            span.filter__number!=element.filter.number
+            span.filter__text(data-animation="paragraph")!=element.filter.name
+            span.filter__number(data-animation="paragraph")!=element.filter.number
       .products__list__gallery
         each media, index in assets.products.productList.gallery
           figure.products__gallery__media(class=`products__gallery__media--${ index + 1 }`)

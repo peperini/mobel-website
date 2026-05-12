@@ -1,7 +1,8 @@
 import GSAP from 'gsap'
 
-import Component from '@classes/Component'
 import Dots from '@animations/Dots'
+
+import Component from '@classes/Component'
 
 export default class Navigation extends Component {
   constructor({ template }) {
